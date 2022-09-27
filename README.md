@@ -1,3 +1,7 @@
+# cv-generator
+
+Gerador de CV personalizado, em PDF, com React + Typescript, deploy em EC2 da AWS, testes unitários com JEST.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
