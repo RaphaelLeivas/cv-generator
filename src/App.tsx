@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
-import { useReactToPrint } from 'react-to-print';
+import React, { useRef } from 'react'
+import { useReactToPrint } from 'react-to-print'
 
-import { CV } from './components/CV';
+import { CV } from './components/CV'
 
 function App() {
-  const componentRef = useRef(null);
+  const componentRef = useRef(null)
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
-  });
+  })
 
   return (
     <div>
@@ -16,7 +16,7 @@ function App() {
       </div>
       <button onClick={handlePrint}>Print this out!</button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
