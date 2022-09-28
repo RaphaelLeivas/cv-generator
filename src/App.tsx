@@ -11,9 +11,9 @@ function App() {
 
   return (
     <div>
-      <div style={{ display: 'none' }}>
+      {/* <div style={{ display: 'none' }}> */}
         <CV ref={componentRef} />
-      </div>
+      {/* </div> */}
       <button onClick={handlePrint}>Print this out!</button>
     </div>
   )
