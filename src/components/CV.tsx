@@ -1,10 +1,15 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import profileImage from '../assets/images/profile.jpeg'
+import randomImage from '../assets/images/random.jpg'
+
+// stack icons / SVG
+import { ReactComponent as ReactIcon } from "../assets/images/stack/reactIcon.svg"
+
+import { StackExperienceRow } from './StackExperienceRow'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    fontSize: 'small',
     fontFamily: `Verdana`,
     border: '1px solid black',
     minHeight: '400px',
@@ -26,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+
+    width: '100%',
+    marginTop: '32px'
   },
   experienceSection: {
     flex: 2,
@@ -36,8 +44,25 @@ const useStyles = makeStyles((theme) => ({
   profileImage: {
     borderRadius: '50%',
     width: '200px',
-  }
+  },
+  stackItemRow: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  stackIconName: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  stackIcon: {
+    width: '32px',
+  },
 }))
+
+const DEV = true
 
 export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
   const classes = useStyles()
@@ -47,14 +72,31 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
       <div className={classes.root}>
         <div className={classes.infoSection}>
           <img
-            src={profileImage}
+            src={DEV ? randomImage : profileImage}
             className={classes.profileImage}
             alt="Imagem de perfil do curriculo"
           />
 
-          <div className={classes.stackExperience}>
-
-          </div>
+          <StackExperienceRow
+            icon={ReactIcon}
+            name="ReactJS"
+            experience="2 anos"
+          />
+          <StackExperienceRow
+            icon={ReactIcon}
+            name="ReactJS"
+            experience="2 anos"
+          />
+          <StackExperienceRow
+            icon={ReactIcon}
+            name="ReactJS"
+            experience="2 anos"
+          />
+          <StackExperienceRow
+            icon={ReactIcon}
+            name="ReactJS"
+            experience="2 anos"
+          />
 
         </div>
         <div className={classes.experienceSection}>
