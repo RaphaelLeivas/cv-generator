@@ -1,9 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { ReactComponent as ReactIcon } from "../assets/images/stack/reactIcon.svg"
 
 interface StackExperienceRowProps {
-  icon: React.FunctionComponent
+  Icon: React.FunctionComponent
   name: string
   experience: string
 }
@@ -15,40 +14,51 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
 
     width: '100%',
-    marginTop: '32px'
+    marginTop: 6,
   },
   stackItemRow: {
     width: '100%',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  iconContainer: {
+    flex: 1,
   },
   stackIconName: {
+    flex: 3,
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
   },
-  stackRowText: {
-    flex: 1, 
-    textAlign: 'center', 
+  stackRowTopText: {
+    width: '100%',
+    textAlign: 'left',
     margin: 0,
     padding: 0,
-    marginLeft: '8px',
-  }
+  },
+  stackRowBottomText: {
+    width: '100%',
+    textAlign: 'left',
+    margin: 0,
+    padding: 0,
+  },
 }))
 
-export const StackExperienceRow = ({ icon, name, experience }: StackExperienceRowProps) => {
+export const StackExperienceRow = ({ Icon, name, experience }: StackExperienceRowProps) => {
   const classes = useStyles()
 
   return (
     <div className={classes.stackExperienceContainer}>
       <div className={classes.stackItemRow}>
-        <div className={classes.stackIconName}>
-          <ReactIcon />
-          <p className={classes.stackRowText}>{name}</p>
+        <div className={classes.iconContainer}>
+          <Icon />
         </div>
-        <p className={classes.stackRowText}>{experience}</p>
+
+        <div className={classes.stackIconName}>
+          <p className={classes.stackRowTopText}>{name}</p>
+          <p className={classes.stackRowBottomText}>{experience}</p>
+        </div>
       </div>
     </div>
   )
