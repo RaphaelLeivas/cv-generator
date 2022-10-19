@@ -7,7 +7,15 @@ import { COLORS } from '../constants/colors'
 
 // stack icons / SVG
 import { ReactComponent as ReactIcon } from '../assets/images/stack/reactIcon.svg'
-// import { ReactComponent as ReactNativeIcon } from "../assets/images/stack/reactNativeIcon.svg"
+import { ReactComponent as TypescriptIcon } from '../assets/images/stack/typescriptIcon.svg'
+import { ReactComponent as JavascriptIcon } from '../assets/images/stack/javascriptIcon.svg'
+import { ReactComponent as NodejsIcon } from '../assets/images/stack/nodejsIcon.svg'
+import { ReactComponent as MongodbIcon } from '../assets/images/stack/mongodbIcon.svg'
+
+// stack icons / SVG
+import databaseIcon  from '../assets/images/stack/databaseIcon.png'
+import scrumIcon  from '../assets/images/stack/scrumIcon.png'
+import apiIcon  from '../assets/images/stack/apiIcon.png'
 
 import { StackExperienceRow } from './StackExperienceRow'
 import { ProfessionalExperienceRow } from './ProfessionalExperienceRow'
@@ -151,22 +159,23 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
 
           <StackExperienceRow Icon={ReactIcon} name="React-Native" experience="1 ano" />
 
-          <StackExperienceRow Icon={ReactIcon} name="Typescript" experience="1 ano" />
+          <StackExperienceRow Icon={TypescriptIcon} name="Typescript" experience="1 ano" />
 
-          <StackExperienceRow Icon={ReactIcon} name="NodeJS" experience="2 anos" />
+          <StackExperienceRow Icon={NodejsIcon} name="NodeJS" experience="2 anos" />
 
-          <StackExperienceRow Icon={ReactIcon} name="ExpressJS" experience="2 anos" />
+          <StackExperienceRow Icon={NodejsIcon} name="ExpressJS" experience="2 anos" />
 
-          <StackExperienceRow Icon={ReactIcon} name="API REST" experience="2 anos" />
+          <StackExperienceRow src={apiIcon} name="API REST" experience="2 anos" />
 
-          <StackExperienceRow Icon={ReactIcon} name="SQLite / PostgreSQL" experience="6 meses" />
+          <StackExperienceRow src={databaseIcon} name="SQLite / PostgreSQL" experience="6 meses" />
 
-          <StackExperienceRow Icon={ReactIcon} name="MongoDB" experience="6 meses" />
+          <StackExperienceRow Icon={MongodbIcon} name="MongoDB" experience="6 meses" />
 
-          <StackExperienceRow Icon={ReactIcon} name="JS / HTML / CSS" experience="2 anos" />
+          <StackExperienceRow Icon={JavascriptIcon} name="JS / HTML / CSS" experience="2 anos" />
 
-          <StackExperienceRow Icon={ReactIcon} name="Metodologia Scrum" experience="2 anos" />
+          <StackExperienceRow src={scrumIcon} name="Metodologia Scrum" experience="2 anos" />
         </div>
+
         <div className={classes.experienceSection}>
           <p>Raphael Henrique Braga Leivas</p>
           <p>Desenvolvedor React / React Native</p>
