@@ -8,6 +8,7 @@ interface ProfessionalExperienceRowProps {
   dateStart: string
   dateEnd: string
   activities?: string[]
+  borderless?: boolean
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -36,11 +37,12 @@ export const ProfessionalExperienceRow = ({
   dateStart,
   dateEnd,
   activities = [],
+  borderless,
 }: ProfessionalExperienceRowProps) => {
   const classes = useStyles()
 
   return (
-    <div className={classes.professionalExperienceContainer}>
+    <div className={classes.professionalExperienceContainer} style={{ borderBottom: borderless ? 0 : '1px solid #00000033' }}>
       <p className={classes.infoSectionSubtitle}>{role}</p>
 
       <CVText italic style={{ fontSize: 13 }}>{company}</CVText>

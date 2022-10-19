@@ -53,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
 
     display: 'flex',
     flexDirection: 'column',
+
+    // backgroundImage: `url(${})`
   },
   profileImage: {
     borderRadius: '50%',
@@ -209,7 +211,7 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
 
           <ProfessionalExperienceRow
             role="Estagiário em Desenvolvimento"
-            company="Visuri"
+            company="Visuri Equipamentos e Serviços SA"
             dateStart="14 Dezembro 2020"
             dateEnd="13 Fevereiro 2022"
             activities={[
@@ -237,7 +239,7 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             dateStart="01 Janeiro 2021"
             dateEnd="31 Junho 2021"
             activities={[
-              "Desenvolvimento de tarefas de sistemas Web, com metodologia Scrum, usando NodeJS, React, ExpressJS",
+              "Desenvolvimento de tarefas de sistemas Web, com metodologia Scrum, usando NodeJS, React, ExpressJS.",
             ]}
           />
 
@@ -249,6 +251,7 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             activities={[
               "Aprendizado a desenvolvimento de sistemas Web e metodologia Scrum.",
             ]}
+            borderless
           />
 
           <p className={classes.infoSectionTitle}>Formação Acadêmica</p>
@@ -261,6 +264,7 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             activities={[
               "Cursando 4° período do curso de Engenharia de Sistemas (noturno).",
             ]}
+            borderless
           />
 
         </div>

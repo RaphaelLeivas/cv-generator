@@ -51,6 +51,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     margin: 0,
     padding: 0,
+
+    textTransform: 'uppercase',
   },
   icon: {
     width: '40px',
