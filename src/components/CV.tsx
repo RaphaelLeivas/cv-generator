@@ -172,7 +172,7 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
 
           <StackExperienceRow Icon={ReactIcon} name="ReactJS" experience={`2 ${t('years')}`} />
 
-          <StackExperienceRow Icon={ReactIcon} name="React-Native" experience={`2 ${t('years')}`} />
+          <StackExperienceRow Icon={ReactIcon} name="React-Native" experience={`1 ${t('year')}`} />
 
           <StackExperienceRow
             Icon={TypescriptIcon}
