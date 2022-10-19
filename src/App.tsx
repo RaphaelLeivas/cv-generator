@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useReactToPrint } from 'react-to-print'
-import { Select, InputLabel, MenuItem, FormControl, Button } from '@material-ui/core'
+import { Select, InputLabel, MenuItem, FormControl, Button, TextField } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 
 import { formatLanguageCodeToText } from './utils/formatters'
@@ -12,13 +12,15 @@ import { COLORS } from './constants/colors'
 const LANGUAGES_LIST = ['pt', 'en']
 
 function App() {
+  const [selectedLanguage, setSelectedLanguage] = useState('pt')
+  const [title, setTitle] = useState('CV - RaphaelLeivas')
+
   const componentRef = useRef(null)
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
+    documentTitle: title,
   })
   const { i18n } = useTranslation()
-
-  const [selectedLanguage, setSelectedLanguage] = useState('pt')
 
   useEffect(() => {
     i18n.changeLanguage(selectedLanguage)
@@ -37,7 +39,7 @@ function App() {
           margin: '12px 0px',
         }}
       >
-        <FormControl style={{ flex: 1, marginLeft: 16 }}>
+        <FormControl style={{ flex: 1, margin: '0px 16px' }}>
           <InputLabel>Idioma</InputLabel>
           <Select
             value={selectedLanguage}
@@ -51,6 +53,13 @@ function App() {
             ))}
           </Select>
         </FormControl>
+
+        <TextField
+          label="Nome do documento"
+          variant="standard"
+          onChange={(event) => setTitle(event.target.value)}
+          value={title}
+        />
 
         <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
           <Button

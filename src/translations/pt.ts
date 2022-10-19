@@ -29,7 +29,7 @@ const pt = {
     'Desenvolvimento de aplicações mobile para equipamentos de eletroestimulação, usando NodeJS, React-Native, Typescript, SQLite e comunicação Bluetooth 5.0.',
   techinician2:
     'Manutenção de sistemas Web e API REST para interface com a aplicação mobile, usando React, PostgreSQL, ExpressJS.',
-  techinician3: 'Deploy em servidores de teste e produção EC2, com Docker e Nginx.',
+  techinician3: 'Deploy em servidores de teste e produção EC2 (AWS), com Docker e Nginx.',
   developmentIntern: 'Estagiário em Desenvolvimento',
   visuri: 'Visuri Equipamentos e Serviços SA',
   developmentIntern1:
@@ -44,8 +44,8 @@ const pt = {
   leadingDeveloper3:
     'Desenvolvimento de firmware com ESP32 para medição de sensores de temperatura e aceleração, com comunicação via Wi-Fi com API REST desenvolvida, para monitoramento remoto de equipamentos e motores.',
   cpejr: 'Consultoria e Projetos Elétricos Júnior - CPE Jr',
-  techonologyConsultant: 'Consultor de Tecnologia',
-  techonologyConsultant1:
+  technologyConsultant: 'Consultor de Tecnologia',
+  technologyConsultant1:
     'Desenvolvimento de tarefas de sistemas Web, com metodologia Scrum, usando NodeJS, React, ExpressJS.',
   trainee: 'Trainee',
   trainee1: 'Aprendizado a desenvolvimento de sistemas Web e metodologia Scrum.',

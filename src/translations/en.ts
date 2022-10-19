@@ -9,7 +9,7 @@ const en = {
   years: 'Years',
   month: 'Month',
   months: 'Months',
-  subtitle: 'React/React-Native Developer',
+  subtitle: 'React / React-Native Developer',
   professionalExperience: 'Professional Experience',
   techinicianDeveloper: 'Technical Developer',
   finatec: 'Foundation of Scientific and Technological Enterprises - Finatec',
@@ -18,7 +18,7 @@ const en = {
   march: 'March',
   april: 'April',
   may: 'May',
-  June: 'June',
+  june: 'June',
   july: 'July',
   agust: 'August',
   september: 'September',
@@ -29,7 +29,7 @@ const en = {
     'Development of mobile applications for electrostimulation devices, using NodeJS, React-Native, Typescript, SQLite and Bluetooth 5.0 communication.',
   techinician2:
     'Maintenance of Web systems and REST APIs to interface with mobile applications, using React, PostgreSQL and ExpressJS.',
-  techinician3: 'Deploy to EC2 test and production servers, with Docker and Nginx.',
+  techinician3: 'Deploy to EC2 (AWS) test and production servers, with Docker and Nginx.',
   developmentIntern: 'Development Intern',
   visuri: 'Visuri Equipments and Services SA',
   developmentIntern1:

@@ -12,6 +12,7 @@ import { ReactComponent as TypescriptIcon } from '../assets/images/stack/typescr
 import { ReactComponent as JavascriptIcon } from '../assets/images/stack/javascriptIcon.svg'
 import { ReactComponent as NodejsIcon } from '../assets/images/stack/nodejsIcon.svg'
 import { ReactComponent as MongodbIcon } from '../assets/images/stack/mongodbIcon.svg'
+import { ReactComponent as AwsIcon } from '../assets/images/stack/awsIcon.svg'
 
 // stack icons / SVG
 import databaseIcon from '../assets/images/stack/databaseIcon.png'
@@ -27,8 +28,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: `Verdana`,
     fontSize: 12,
 
-    minHeight: '400px',
-
     display: 'flex',
     flexDirection: 'row',
   },
@@ -38,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: 'lightGray',
-    padding: 20,
+    backgroundColor: COLORS.LIGHTGRAY,
+    padding: '10px 20px 10px 20px',
   },
   stackExperience: {
     display: 'flex',
@@ -55,8 +54,6 @@ const useStyles = makeStyles((theme) => ({
 
     display: 'flex',
     flexDirection: 'column',
-
-    // backgroundImage: `url(${})`
   },
   profileImage: {
     borderRadius: '50%',
@@ -102,14 +99,14 @@ const useStyles = makeStyles((theme) => ({
   cvTitle: {
     textTransform: 'uppercase',
     color: COLORS.PRIMARY,
-    fontSize: 20,
+    fontSize: 22,
 
     marginBottom: 2,
     marginTop: 2,
   },
   cvSubTitle: {
-    fontSize: 16,
-    marginBottom: 16,
+    fontSize: 18,
+    marginBottom: 0,
     marginTop: 6,
   },
 }))
@@ -205,6 +202,8 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
 
           <StackExperienceRow Icon={MongodbIcon} name="MongoDB" experience={`6 ${t('months')}`} />
 
+          <StackExperienceRow Icon={AwsIcon} name="AWS / DevOps" experience={`2 ${t('months')}`} />
+
           <StackExperienceRow
             Icon={JavascriptIcon}
             name="JS / HTML / CSS"
@@ -248,11 +247,11 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
           />
 
           <ProfessionalExperienceRow
-            role={t('techonologyConsultant')}
+            role={t('technologyConsultant')}
             company={t('cpejr')}
             dateStart={'01 ' + t('january') + ' 2021'}
             dateEnd={'31 ' + t('june') + ' 2021'}
-            activities={[t('techonologyConsultant1')]}
+            activities={[t('technologyConsultant1')]}
           />
 
           <ProfessionalExperienceRow
