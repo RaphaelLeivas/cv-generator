@@ -1,12 +1,13 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+import { CVText } from './CVText'
 
 interface ProfessionalExperienceRowProps {
   role: string
   company: string
   dateStart: string
   dateEnd: string
-  activities: string
+  activities?: string[]
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -15,26 +16,17 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
 
     width: '100%',
-    marginTop: '32px',
+    marginTop: 8,
   },
-  stackItemRow: {
-    width: '100%',
+  infoSectionSubtitle: {
+    textTransform: 'uppercase',
+    marginBottom: 2,
+    marginTop: 2,
+    fontSize: 14,
+  },
+  companyAndDates: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  stackIconName: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  stackRowText: {
-    flex: 1,
-    textAlign: 'center',
-    margin: 0,
-    padding: 0,
-    marginLeft: '8px',
   },
 }))
 
@@ -43,17 +35,25 @@ export const ProfessionalExperienceRow = ({
   company,
   dateStart,
   dateEnd,
-  activities,
+  activities = [],
 }: ProfessionalExperienceRowProps) => {
   const classes = useStyles()
 
   return (
     <div className={classes.professionalExperienceContainer}>
-      <p>{role}</p>
-      <p>{company}</p>
-      <p>{dateStart}</p>
-      <p>{dateEnd}</p>
-      <p>{activities}</p>
+      <p className={classes.infoSectionSubtitle}>{role}</p>
+
+      <CVText italic style={{ fontSize: 13 }}>{company}</CVText>
+      <CVText italic style={{ marginTop: 2 }}>
+        {dateStart} - {dateEnd}
+      </CVText>
+
+      <ul style={{ marginTop: 4, marginBottom: 4 }} >
+        {activities.map((activity, index) => (
+          <li key={index} style={{ marginBottom: 4 }}>{activity}</li>
+        ))}
+      </ul>
+
     </div>
   )
 }

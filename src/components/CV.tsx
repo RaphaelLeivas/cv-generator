@@ -2,7 +2,6 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import profileImage from '../assets/images/profile.jpeg'
 import randomImage from '../assets/images/random.jpg'
-import { LOREM_IPSUM_TEXT } from '../constants/random'
 import { COLORS } from '../constants/colors'
 
 // stack icons / SVG
@@ -13,9 +12,9 @@ import { ReactComponent as NodejsIcon } from '../assets/images/stack/nodejsIcon.
 import { ReactComponent as MongodbIcon } from '../assets/images/stack/mongodbIcon.svg'
 
 // stack icons / SVG
-import databaseIcon  from '../assets/images/stack/databaseIcon.png'
-import scrumIcon  from '../assets/images/stack/scrumIcon.png'
-import apiIcon  from '../assets/images/stack/apiIcon.png'
+import databaseIcon from '../assets/images/stack/databaseIcon.png'
+import scrumIcon from '../assets/images/stack/scrumIcon.png'
+import apiIcon from '../assets/images/stack/apiIcon.png'
 
 import { StackExperienceRow } from './StackExperienceRow'
 import { ProfessionalExperienceRow } from './ProfessionalExperienceRow'
@@ -95,6 +94,20 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'uppercase',
     marginBottom: 2,
     fontSize: 14,
+  },
+  cvTitle: {
+    textTransform: 'uppercase',
+    color: COLORS.PRIMARY,
+    fontSize: 20,
+
+    marginBottom: 2,
+    marginTop: 2,
+  },
+  cvSubTitle: {
+    fontSize: 16,
+    marginBottom: 16,
+    marginTop: 6,
+
   },
 }))
 
@@ -177,21 +190,79 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
         </div>
 
         <div className={classes.experienceSection}>
-          <p>Raphael Henrique Braga Leivas</p>
-          <p>Desenvolvedor React / React Native</p>
+          <p className={classes.cvTitle} >Raphael Henrique Braga Leivas</p>
+          <p className={classes.cvSubTitle}> Desenvolvedor React / React Native - 21 anos</p>
 
-          <p>Perfil</p>
-          <p>{LOREM_IPSUM_TEXT}</p>
-
-          <p>Experiência Profissional</p>
+          <p className={classes.infoSectionTitle}>Experiência Profissional</p>
 
           <ProfessionalExperienceRow
-            role="Teste"
-            company="Teste"
-            dateStart="Teste"
-            dateEnd="Teste"
-            activities="Teste"
+            role="Técnico Desenvolvedor"
+            company="Fundação de Empreendimentos Científicos e Tecnológicos - Finatec"
+            dateStart="16 Fevereiro 2022"
+            dateEnd="16 Janeiro 2023"
+            activities={[
+              "Desenvolvimento de aplicações mobile para equipamentos de eletroestimulação, usando NodeJS, React-Native, Typescript, SQLite e comunicação Bluetooth 5.0. ",
+              "Manutenção de sistemas Web e API REST para interface com a aplicação mobile, usando React, PostgreSQL, ExpressJS.",
+              "Deploy em servidores de teste e produção EC2, com Docker e Nginx.",
+            ]}
           />
+
+          <ProfessionalExperienceRow
+            role="Estagiário em Desenvolvimento"
+            company="Visuri"
+            dateStart="14 Dezembro 2020"
+            dateEnd="13 Fevereiro 2022"
+            activities={[
+              "Desenvolvimento de sistema Web para gestão de testes rápidos de COVID-19, usando NodeJS, React, ExpressJS, MongoDB.",
+              "Desenvolvimento de aplicação desktop para interface com dispositivo para testes PCR-LAMP, usando Electron, React, Material UI.",
+              "Testes, manutenção de equipamentos médicos. Elaboração de relatórios.",
+            ]}
+          />
+
+          <ProfessionalExperienceRow
+            role="Desenvolvedor Líder"
+            company="Consultoria e Projetos Elétricos Júnior - CPE Jr"
+            dateStart="01 Julho 2021"
+            dateEnd="31 Dezembro 2021"
+            activities={[
+              "Suporte aos consultores de tecnologia em dificuldades no aprendizado e execução das tarefas. Code Review e análise de Pull Request.",
+              "Desenvolvimento de sistemas Web com NodeJS, React, DynamoDB, ExpressJS. ",
+              "Desenvolvimento de firmware com ESP32 para medição de sensores de temperatura e aceleração, com comunicação via Wi-Fi com API REST desenvolvida, para monitoramento remoto de equipamentos e motores.",
+            ]}
+          />
+
+          <ProfessionalExperienceRow
+            role="Consultor de Tecnologia"
+            company="Consultoria e Projetos Elétricos Júnior - CPE Jr"
+            dateStart="01 Janeiro 2021"
+            dateEnd="31 Junho 2021"
+            activities={[
+              "Desenvolvimento de tarefas de sistemas Web, com metodologia Scrum, usando NodeJS, React, ExpressJS",
+            ]}
+          />
+
+          <ProfessionalExperienceRow
+            role="Trainee"
+            company="Consultoria e Projetos Elétricos Júnior - CPE Jr"
+            dateStart="01 Setembro 2020"
+            dateEnd="31 Dezembro 2020"
+            activities={[
+              "Aprendizado a desenvolvimento de sistemas Web e metodologia Scrum.",
+            ]}
+          />
+
+          <p className={classes.infoSectionTitle}>Formação Acadêmica</p>
+
+          <ProfessionalExperienceRow
+            role="Graduando em Engenharia de Sistemas"
+            company="Universidade Federal de Minas Gerasi - UFMG"
+            dateStart="03 março 2020"
+            dateEnd="31 Dezembro 2026"
+            activities={[
+              "Cursando 4° período do curso de Engenharia de Sistemas (noturno).",
+            ]}
+          />
+
         </div>
       </div>
     </div>
