@@ -1,5 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+
 import profileImage from '../assets/images/profile.jpeg'
 import randomImage from '../assets/images/random.jpg'
 import { COLORS } from '../constants/colors'
@@ -109,14 +111,15 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 16,
     marginBottom: 16,
     marginTop: 6,
-
   },
 }))
 
 const HIDE_PROFILE_IMAGE = false
+const CURRENT_AGE = 21
 
 export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
   const classes = useStyles()
+  const { t } = useTranslation()
 
   return (
     <div ref={ref}>
@@ -129,18 +132,18 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
           />
 
           <div className={classes.textContainer}>
-            <p className={classes.infoSectionTitle}>Contato</p>
+            <p className={classes.infoSectionTitle}>{t('contact')}</p>
 
-            <p className={classes.infoSectionSubtitle}>Email</p>
+            <p className={classes.infoSectionSubtitle}>{t('email')}</p>
             <CVText>raphaelhenrique2013@gmail.com</CVText>
 
-            <p className={classes.infoSectionSubtitle}>Residência</p>
+            <p className={classes.infoSectionSubtitle}>{t('residence')}</p>
             <CVText>Bairro Sagrada Família, Belo Horizonte, MG, Brasil</CVText>
 
-            <p className={classes.infoSectionSubtitle}>Telefone</p>
+            <p className={classes.infoSectionSubtitle}>{t('phone')}</p>
             <CVText>(31) 9 9563 - 2802</CVText>
 
-            <p className={classes.infoSectionSubtitle}>LinkedIn</p>
+            <p className={classes.infoSectionSubtitle}>{t('linkedin')}</p>
             <a
               href="https://www.linkedin.com/in/raphaelbleivas/"
               target="_blank"
@@ -167,106 +170,110 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
               <CVText>Básico</CVText>
             </div> */}
 
-            <p className={classes.infoSectionTitle}>Experiência por Stack</p>
+            <p className={classes.infoSectionTitle}>{t('stackExperience')}</p>
           </div>
 
-          <StackExperienceRow Icon={ReactIcon} name="ReactJS" experience="2 anos" />
+          <StackExperienceRow Icon={ReactIcon} name="ReactJS" experience={`2 ${t('years')}`} />
 
-          <StackExperienceRow Icon={ReactIcon} name="React-Native" experience="1 ano" />
+          <StackExperienceRow Icon={ReactIcon} name="React-Native" experience={`2 ${t('years')}`} />
 
-          <StackExperienceRow Icon={TypescriptIcon} name="Typescript" experience="1 ano" />
+          <StackExperienceRow
+            Icon={TypescriptIcon}
+            name="Typescript"
+            experience={`1 ${t('year')}`}
+          />
 
-          <StackExperienceRow Icon={NodejsIcon} name="NodeJS" experience="2 anos" />
+          <StackExperienceRow Icon={NodejsIcon} name="NodeJS" experience={`2 ${t('years')}`} />
 
-          <StackExperienceRow Icon={NodejsIcon} name="ExpressJS" experience="2 anos" />
+          <StackExperienceRow
+            Icon={NodejsIcon}
+            name="ExpressJS"
+            experience={`1 ${t('year')} ${t('and')} 6 ${t('months')}`}
+          />
 
-          <StackExperienceRow src={apiIcon} name="API REST" experience="2 anos" />
+          <StackExperienceRow
+            src={apiIcon}
+            name="API REST"
+            experience={`1 ${t('year')} ${t('and')} 6 ${t('months')}`}
+          />
 
-          <StackExperienceRow src={databaseIcon} name="SQLite / PostgreSQL" experience="6 meses" />
+          <StackExperienceRow
+            src={databaseIcon}
+            name="SQLite / PostgreSQL"
+            experience={`6 ${t('months')}`}
+          />
 
-          <StackExperienceRow Icon={MongodbIcon} name="MongoDB" experience="6 meses" />
+          <StackExperienceRow Icon={MongodbIcon} name="MongoDB" experience={`6 ${t('months')}`} />
 
-          <StackExperienceRow Icon={JavascriptIcon} name="JS / HTML / CSS" experience="2 anos" />
+          <StackExperienceRow
+            Icon={JavascriptIcon}
+            name="JS / HTML / CSS"
+            experience={`2 ${t('years')}`}
+          />
 
-          <StackExperienceRow src={scrumIcon} name="Metodologia Scrum" experience="2 anos" />
+          <StackExperienceRow src={scrumIcon} name="Scrum" experience={`2 ${t('years')}`} />
         </div>
 
         <div className={classes.experienceSection}>
-          <p className={classes.cvTitle} >Raphael Henrique Braga Leivas</p>
-          <p className={classes.cvSubTitle}> Desenvolvedor React / React Native - 21 anos</p>
+          <p className={classes.cvTitle}>Raphael Henrique Braga Leivas</p>
+          <p className={classes.cvSubTitle}>
+            {' '}
+            {t('subtitle')} - {CURRENT_AGE} {t('years')}
+          </p>
 
-          <p className={classes.infoSectionTitle}>Experiência Profissional</p>
+          <p className={classes.infoSectionTitle}>{t('professionalExperience')}</p>
 
           <ProfessionalExperienceRow
-            role="Técnico Desenvolvedor"
-            company="Fundação de Empreendimentos Científicos e Tecnológicos - Finatec"
-            dateStart="16 Fevereiro 2022"
-            dateEnd="16 Janeiro 2023"
-            activities={[
-              "Desenvolvimento de aplicações mobile para equipamentos de eletroestimulação, usando NodeJS, React-Native, Typescript, SQLite e comunicação Bluetooth 5.0. ",
-              "Manutenção de sistemas Web e API REST para interface com a aplicação mobile, usando React, PostgreSQL, ExpressJS.",
-              "Deploy em servidores de teste e produção EC2, com Docker e Nginx.",
-            ]}
+            role={t('techinicianDeveloper')}
+            company={t('finatec')}
+            dateStart={'16 ' + t('february') + ' 2022'}
+            dateEnd={'16 ' + t('january') + ' 2023'}
+            activities={[t('techinician1'), t('techinician2'), t('techinician3')]}
           />
 
           <ProfessionalExperienceRow
-            role="Estagiário em Desenvolvimento"
-            company="Visuri Equipamentos e Serviços SA"
-            dateStart="14 Dezembro 2020"
-            dateEnd="13 Fevereiro 2022"
-            activities={[
-              "Desenvolvimento de sistema Web para gestão de testes rápidos de COVID-19, usando NodeJS, React, ExpressJS, MongoDB.",
-              "Desenvolvimento de aplicação desktop para interface com dispositivo para testes PCR-LAMP, usando Electron, React, Material UI.",
-              "Testes, manutenção de equipamentos médicos. Elaboração de relatórios.",
-            ]}
+            role={t('developmentIntern')}
+            company={t('visuri')}
+            dateStart={'14 ' + t('december') + ' 2020'}
+            dateEnd={'15 ' + t('february') + ' 2022'}
+            activities={[t('developmentIntern1'), t('developmentIntern2'), t('developmentIntern3')]}
           />
 
           <ProfessionalExperienceRow
-            role="Desenvolvedor Líder"
-            company="Consultoria e Projetos Elétricos Júnior - CPE Jr"
-            dateStart="01 Julho 2021"
-            dateEnd="31 Dezembro 2021"
-            activities={[
-              "Suporte aos consultores de tecnologia em dificuldades no aprendizado e execução das tarefas. Code Review e análise de Pull Request.",
-              "Desenvolvimento de sistemas Web com NodeJS, React, DynamoDB, ExpressJS. ",
-              "Desenvolvimento de firmware com ESP32 para medição de sensores de temperatura e aceleração, com comunicação via Wi-Fi com API REST desenvolvida, para monitoramento remoto de equipamentos e motores.",
-            ]}
+            role={t('leadingDeveloper')}
+            company={t('cpejr')}
+            dateStart={'01 ' + t('july') + ' 2021'}
+            dateEnd={'31 ' + t('december') + ' 2021'}
+            activities={[t('leadingDeveloper1'), t('leadingDeveloper2'), t('leadingDeveloper3')]}
           />
 
           <ProfessionalExperienceRow
-            role="Consultor de Tecnologia"
-            company="Consultoria e Projetos Elétricos Júnior - CPE Jr"
-            dateStart="01 Janeiro 2021"
-            dateEnd="31 Junho 2021"
-            activities={[
-              "Desenvolvimento de tarefas de sistemas Web, com metodologia Scrum, usando NodeJS, React, ExpressJS.",
-            ]}
+            role={t('techonologyConsultant')}
+            company={t('cpejr')}
+            dateStart={'01 ' + t('january') + ' 2021'}
+            dateEnd={'31 ' + t('june') + ' 2021'}
+            activities={[t('techonologyConsultant1')]}
           />
 
           <ProfessionalExperienceRow
-            role="Trainee"
-            company="Consultoria e Projetos Elétricos Júnior - CPE Jr"
-            dateStart="01 Setembro 2020"
-            dateEnd="31 Dezembro 2020"
-            activities={[
-              "Aprendizado a desenvolvimento de sistemas Web e metodologia Scrum.",
-            ]}
+            role={t('trainee')}
+            company={t('cpejr')}
+            dateStart={'01 ' + t('september') + ' 2020'}
+            dateEnd={'31 ' + t('december') + ' 2020'}
+            activities={[t('trainee1')]}
             borderless
           />
 
-          <p className={classes.infoSectionTitle}>Formação Acadêmica</p>
+          <p className={classes.infoSectionTitle}>{t('academicFormation')}</p>
 
           <ProfessionalExperienceRow
-            role="Graduando em Engenharia de Sistemas"
-            company="Universidade Federal de Minas Gerasi - UFMG"
-            dateStart="03 março 2020"
-            dateEnd="31 Dezembro 2026"
-            activities={[
-              "Cursando 4° período do curso de Engenharia de Sistemas (noturno).",
-            ]}
+            role={t('systemsEngineerUndergraduate')}
+            company={t('ufmg')}
+            dateStart={'03 ' + t('march') + ' 2020'}
+            dateEnd={'31 ' + t('december') + ' 2026'}
+            activities={[t('ufmg1')]}
             borderless
           />
-
         </div>
       </div>
     </div>

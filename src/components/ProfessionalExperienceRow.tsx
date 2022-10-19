@@ -42,20 +42,26 @@ export const ProfessionalExperienceRow = ({
   const classes = useStyles()
 
   return (
-    <div className={classes.professionalExperienceContainer} style={{ borderBottom: borderless ? 0 : '1px solid #00000033' }}>
+    <div
+      className={classes.professionalExperienceContainer}
+      style={{ borderBottom: borderless ? 0 : '1px solid #00000033' }}
+    >
       <p className={classes.infoSectionSubtitle}>{role}</p>
 
-      <CVText italic style={{ fontSize: 13 }}>{company}</CVText>
+      <CVText italic style={{ fontSize: 13 }}>
+        {company}
+      </CVText>
       <CVText italic style={{ marginTop: 2 }}>
         {dateStart} - {dateEnd}
       </CVText>
 
-      <ul style={{ marginTop: 4, marginBottom: 4 }} >
+      <ul style={{ marginTop: 4, marginBottom: 4 }}>
         {activities.map((activity, index) => (
-          <li key={index} style={{ marginBottom: 4 }}>{activity}</li>
+          <li key={index} style={{ marginBottom: 4 }}>
+            {activity}
+          </li>
         ))}
       </ul>
-
     </div>
   )
 }

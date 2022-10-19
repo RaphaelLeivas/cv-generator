@@ -7,25 +7,25 @@ interface CVTextProps {
   italic?: boolean
 }
 
-export const CVText = ({ children, style, italic }: CVTextProps) => italic ? (
-  <i
-    style={{
-      marginTop: 6,
-      marginBottom: 6,
-      ...style
-    }}
-  >
-    {children}
-  </i>
-) : (
-  <p
-    style={{
-      marginTop: 6,
-      marginBottom: 6,
-      ...style
-    }}
-  >
-    {children}
-  </p>
-
-)
+export const CVText = ({ children, style, italic }: CVTextProps) =>
+  italic ? (
+    <i
+      style={{
+        marginTop: 6,
+        marginBottom: 6,
+        ...style,
+      }}
+    >
+      {children}
+    </i>
+  ) : (
+    <p
+      style={{
+        marginTop: 6,
+        marginBottom: 6,
+        ...style,
+      }}
+    >
+      {children}
+    </p>
+  )

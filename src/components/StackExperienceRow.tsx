@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
 
-    marginRight: 16
+    marginRight: 16,
   },
   stackIconName: {
     flex: 3,
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     padding: 0,
 
-    marginBottom: 2
+    marginBottom: 2,
   },
   stackRowBottomText: {
     width: '100%',
@@ -67,15 +67,7 @@ export const StackExperienceRow = ({ Icon, src, name, experience }: StackExperie
     <div className={classes.stackExperienceContainer}>
       <div className={classes.stackItemRow}>
         <div className={classes.iconContainer}>
-          {Icon ? (
-            <Icon />
-            ) : (
-            <img
-              src={src}
-              className={classes.icon}
-              alt="Imagem de logo"
-            />
-          )}
+          {Icon ? <Icon /> : <img src={src} className={classes.icon} alt="Imagem de logo" />}
         </div>
 
         <div className={classes.stackIconName}>
