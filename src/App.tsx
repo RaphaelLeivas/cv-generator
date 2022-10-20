@@ -28,8 +28,6 @@ function App() {
 
   return (
     <div>
-      <CV ref={componentRef} />
-
       <div
         style={{
           width: '100%',
@@ -39,20 +37,22 @@ function App() {
           margin: '12px 0px',
         }}
       >
-        <FormControl style={{ flex: 1, margin: '0px 16px' }}>
-          <InputLabel>Idioma</InputLabel>
-          <Select
-            value={selectedLanguage}
-            label="Selecionar Idiomna"
-            onChange={(event: any) => setSelectedLanguage(event.target.value)}
-          >
-            {LANGUAGES_LIST.map((language, index) => (
-              <MenuItem key={index} value={language}>
-                {formatLanguageCodeToText(language)}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+        <div style={{ flex: 1, margin: '0px 16px' }}>
+          <FormControl style={{ width: '50%' }} >
+            <InputLabel>Idioma</InputLabel>
+            <Select
+              value={selectedLanguage}
+              label="Selecionar Idiomna"
+              onChange={(event: any) => setSelectedLanguage(event.target.value)}
+            >
+              {LANGUAGES_LIST.map((language, index) => (
+                <MenuItem key={index} value={language}>
+                  {formatLanguageCodeToText(language)}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </div>
 
         <TextField
           label="Nome do documento"
@@ -71,6 +71,8 @@ function App() {
           </Button>
         </div>
       </div>
+
+      <CV ref={componentRef} />
     </div>
   )
 }
