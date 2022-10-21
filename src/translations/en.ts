@@ -51,7 +51,7 @@ const en = {
   trainee: 'Trainee',
   trainee1: 'Learning to develop Web systems and Scrum methodology.',
   academicFormation: 'Academic Formation',
-  systemsEngineerUndergraduate: 'Graduating in Systems Engineering',
+  systemsEngineerUndergraduate: 'Systems Engineering Undergraduate',
   ufmg: 'Federal University of Minas Gerais - UFMG',
   ufmg1:
     'Studying 4th semester of Systems Engineering course, total of 12 semesters. Classes are at night on campus.',
