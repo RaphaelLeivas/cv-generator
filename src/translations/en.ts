@@ -28,8 +28,9 @@ const en = {
   techinician1:
     'Development of mobile applications for electrostimulation devices, using NodeJS, React-Native, Typescript, SQLite and Bluetooth 5.0 communication.',
   techinician2:
-    'Maintenance of Web systems and REST APIs to interface with mobile applications, using React, PostgreSQL and ExpressJS.',
+    'Development and maintenance of Web systems and REST APIs to interface with mobile applications, using React, PostgreSQL and ExpressJS.',
   techinician3: 'Deploy to EC2 (AWS) test and production servers, with Docker and Nginx.',
+  techinician4: 'Database modeling of relational databases for storing data of the mobile and Web applications.',
   developmentIntern: 'Development Intern',
   visuri: 'Visuri Equipments and Services SA',
   developmentIntern1:
@@ -51,11 +52,14 @@ const en = {
   trainee: 'Trainee',
   trainee1: 'Learning to develop Web systems and Scrum methodology.',
   academicFormation: 'Academic Formation',
-  systemsEngineerUndergraduate: 'Systems Engineering Undergraduate',
+  systemsEngineerUndergraduate: 'Systems Engineering',
   ufmg: 'Federal University of Minas Gerais - UFMG',
   ufmg1:
     'Studying 4th semester of Systems Engineering course, total of 12 semesters. Classes are at night on campus.',
   and: 'and',
+  cefetTechinician: 'Techician Course', 
+  cefet: 'Federal Center of Techonological Education of Minas Gerais - CEFET-MG',
+  cefet1: 'High School completed, techinician course in Biomedical Equipments.',
 }
 
 export default en

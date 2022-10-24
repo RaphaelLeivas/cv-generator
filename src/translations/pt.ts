@@ -28,8 +28,9 @@ const pt = {
   techinician1:
     'Desenvolvimento de aplicações mobile para equipamentos de eletroestimulação, usando NodeJS, React-Native, Typescript, SQLite e comunicação Bluetooth 5.0.',
   techinician2:
-    'Manutenção de sistemas Web e API REST para interface com a aplicação mobile, usando React, PostgreSQL, ExpressJS.',
+    'Desenvolvimento e manutenção de sistemas Web e API REST para interface com a aplicação mobile, usando React, PostgreSQL, ExpressJS.',
   techinician3: 'Deploy em servidores de teste e produção EC2 (AWS), com Docker e Nginx.',
+  techinician4: 'Modelagem de banco de dados relacional para armazenamento de dados das aplicações mobile e Web.',
   developmentIntern: 'Estagiário em Desenvolvimento',
   visuri: 'Visuri Equipamentos e Serviços SA',
   developmentIntern1:
@@ -50,10 +51,13 @@ const pt = {
   trainee: 'Trainee',
   trainee1: 'Aprendizado a desenvolvimento de sistemas Web e metodologia Scrum.',
   academicFormation: 'Formação Acadêmica',
-  systemsEngineerUndergraduate: 'Graduando em Engenharia de Sistemas',
+  systemsEngineerUndergraduate: 'Engenharia de Sistemas',
   ufmg: 'Universidade Federal de Minas Gerais - UFMG',
   ufmg1: 'Cursando 4° período do curso de Engenharia de Sistemas (noturno).',
   and: 'e',
+  cefetTechinician: 'Curso técnico',
+  cefet: 'Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG',
+  cefet1: 'Ensino médio completo, curso técnico em Equipamentos Biomédicos.',
 }
 
 export default pt

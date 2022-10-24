@@ -19,6 +19,14 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     marginTop: 8,
   },
+  professionalExperienceHeader: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
   infoSectionSubtitle: {
     textTransform: 'uppercase',
     marginBottom: 2,
@@ -46,13 +54,15 @@ export const ProfessionalExperienceRow = ({
       className={classes.professionalExperienceContainer}
       style={{ borderBottom: borderless ? 0 : '1px solid #00000033' }}
     >
-      <p className={classes.infoSectionSubtitle}>{role}</p>
+      <div className={classes.professionalExperienceHeader}>
+        <p className={classes.infoSectionSubtitle}>{role}</p>
+        <CVText italic style={{ margin: 0, marginLeft: 4, fontSize: 10 }}>
+          {dateStart} - {dateEnd}
+        </CVText>
+      </div>
 
       <CVText italic style={{ fontSize: 13 }}>
         {company}
-      </CVText>
-      <CVText italic style={{ marginTop: 2 }}>
-        {dateStart} - {dateEnd}
       </CVText>
 
       <ul style={{ marginTop: 4, marginBottom: 4 }}>

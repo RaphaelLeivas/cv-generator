@@ -227,7 +227,7 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             company={t('finatec')}
             dateStart={'16 ' + t('february') + ' 2022'}
             dateEnd={'16 ' + t('january') + ' 2023'}
-            activities={[t('techinician1'), t('techinician2'), t('techinician3')]}
+            activities={[t('techinician1'), t('techinician2'), t('techinician3'), t('techinician4')]}
           />
 
           <ProfessionalExperienceRow
@@ -271,6 +271,15 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             dateStart={'03 ' + t('march') + ' 2020'}
             dateEnd={'31 ' + t('december') + ' 2026'}
             activities={[t('ufmg1')]}
+            borderless
+          />
+
+          <ProfessionalExperienceRow
+            role={t('cefetTechinician')}
+            company={t('cefet')}
+            dateStart={'01 ' + t('february') + ' 2017'}
+            dateEnd={'31 ' + t('november') + ' 2019'}
+            activities={[t('cefet1')]}
             borderless
           />
         </div>
