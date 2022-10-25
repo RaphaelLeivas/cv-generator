@@ -2,16 +2,19 @@ const en = {
   contact: 'Contact',
   email: 'Email',
   residence: 'Residence',
+  neighborhood: 'Neighborhood',
   phone: 'Phone',
   linkedin: 'LinkedIn',
   stackExperience: 'Experience per Stack',
   year: 'Year',
   years: 'Years',
+  age: 'Years Old',
   month: 'Month',
   months: 'Months',
+  brazil: 'Brazil',
   subtitle: 'React / React-Native Developer',
   professionalExperience: 'Professional Experience',
-  techinicianDeveloper: 'Technical Developer',
+  techinicianDeveloper: 'Technician Developer',
   finatec: 'Foundation of Scientific and Technological Enterprises - Finatec',
   january: 'January',
   february: 'February',
@@ -34,21 +37,21 @@ const en = {
   developmentIntern: 'Development Intern',
   visuri: 'Visuri Equipments and Services SA',
   developmentIntern1:
-    'Web system development for COVID-19 rapid test management, using NodeJS, React, ExpressJS, MongoDB.',
+    'Web system development for COVID-19 quick testing management, using NodeJS, React, ExpressJS, MongoDB.',
   developmentIntern2:
     'Desktop application development to interface with device for PCR-LAMP tests, using Electron, React, Material UI.',
   developmentIntern3:
     'Testing, maintenance of medical equipments. Elaboration of reports and documentations.',
   leadingDeveloper: 'Lead Developer',
   leadingDeveloper1:
-    'Support for technology consultants who have difficulties in learning and performing tasks. Code Review and Pull Request Analysis.',
+    'Support for technology consultants with difficulties in learning and performing development tasks. Code Review and Pull Request Analysis.',
   leadingDeveloper2: 'Web systems development with NodeJS, React, DynamoDB, ExpressJS.',
   leadingDeveloper3:
-    'Firmware development with ESP32 for measuring temperature and acceleration sensors, with communication via Wi-Fi with developed REST API, for remote monitoring of equipments and motors.',
+    'Firmware development with ESP32 for measuring temperature and acceleration sensors, with communication via Wi-Fi with developed REST API, for remote monitoring of equipments and engines.',
   cpejr: 'Junior Electrical Projects and Consulting - CPE Jr',
   technologyConsultant: 'Technology Consultant',
   technologyConsultant1:
-    'Development of tasks of Web systems, with Scrum methodology, using NodeJS, React, ExpressJS.',
+    'Executing tasks in development of Web systems, with Scrum methodology, using NodeJS, React, ExpressJS.',
   trainee: 'Trainee',
   trainee1: 'Learning to develop Web systems and Scrum methodology.',
   academicFormation: 'Academic Formation',
@@ -57,9 +60,16 @@ const en = {
   ufmg1:
     'Studying 4th semester of Systems Engineering course, total of 12 semesters. Classes are at night on campus.',
   and: 'and',
-  cefetTechinician: 'Techician Course', 
+  cefetTechinician: 'Techician Course',
   cefet: 'Federal Center of Techonological Education of Minas Gerais - CEFET-MG',
   cefet1: 'High School completed, techinician course in Biomedical Equipments.',
+  languages: 'Languages',
+  portuguese: 'Portuguese',
+  native: 'Native',
+  english: 'English',
+  advanced: 'Advanced',
+  german: 'German',
+  basic: 'Basic',
 }
 
 export default en

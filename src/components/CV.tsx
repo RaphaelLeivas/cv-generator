@@ -13,6 +13,7 @@ import { ReactComponent as JavascriptIcon } from '../assets/images/stack/javascr
 import { ReactComponent as NodejsIcon } from '../assets/images/stack/nodejsIcon.svg'
 import { ReactComponent as MongodbIcon } from '../assets/images/stack/mongodbIcon.svg'
 import { ReactComponent as AwsIcon } from '../assets/images/stack/awsIcon.svg'
+import { ReactComponent as WhatsappIcon } from '../assets/images/whatsappIcon.svg'
 
 // stack icons / SVG
 import databaseIcon from '../assets/images/stack/databaseIcon.png'
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '32px',
   },
   experienceSection: {
-    flex: 2,
+    flex: 2.5,
     padding: 20,
 
     display: 'flex',
@@ -78,22 +79,30 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   distanceInfoContainer: {
+    flex: 1,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
 
-    borderBottom: '1px solid #00000022',
+    padding: '0px 24px',
+    borderRight: '1px solid #00000077',
+
+    '&:last-child': {
+      borderRight: '0px solid #00000077',
+    }
   },
   infoSectionTitle: {
     textTransform: 'uppercase',
     color: COLORS.PRIMARY,
     fontSize: 16,
     marginBottom: 4,
+    marginTop: 10,
   },
   infoSectionSubtitle: {
     textTransform: 'uppercase',
     marginBottom: 2,
+    marginTop: 10,
     fontSize: 14,
   },
   cvTitle: {
@@ -109,6 +118,38 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 0,
     marginTop: 6,
   },
+  languagesContainer: {
+    width: '100%',
+
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  languagesTitle: {
+    flex: 1,
+  },
+  languagesList: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+
+    marginBottom: '-12px'
+  },
+  phoneContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  wppIcon: {
+    flex: 1,
+  },
+  phoneInfo: {
+    flex: 4,
+
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  }
 }))
 
 const HIDE_PROFILE_IMAGE = false
@@ -132,13 +173,11 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             <p className={classes.infoSectionTitle}>{t('contact')}</p>
 
             <p className={classes.infoSectionSubtitle}>{t('email')}</p>
-            <CVText>raphaelhenrique2013@gmail.com</CVText>
+            <CVText>raphaelhenrique2013@outlook.com</CVText>
+            <CVText style={{ marginTop: '-2px' }} >rapha.lei8@gmail.com</CVText>
 
             <p className={classes.infoSectionSubtitle}>{t('residence')}</p>
-            <CVText>Bairro Sagrada Família, Belo Horizonte, MG, Brasil</CVText>
-
-            <p className={classes.infoSectionSubtitle}>{t('phone')}</p>
-            <CVText>(31) 9 9563 - 2802</CVText>
+            <CVText>Sagrada Família, Belo Horizonte, Minas Gerais, {t('brazil')}</CVText>
 
             <p className={classes.infoSectionSubtitle}>{t('linkedin')}</p>
             <a
@@ -150,24 +189,18 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
               /raphaelbleivas/
             </a>
 
-            {/* <p className={classes.infoSectionTitle}>Linguagens</p>
+            <div className={classes.phoneContainer}>
+              <div className={classes.wppIcon}>
+                <WhatsappIcon />
 
-            <div className={classes.distanceInfoContainer}>
-              <CVText>Português</CVText>
-              <CVText>Nativo</CVText>
+              </div>
+              <div className={classes.phoneInfo}>
+                <p className={classes.infoSectionSubtitle}>{t('phone')}</p>
+                <CVText>(31) 9 9563 - 2802</CVText>
+              </div>
             </div>
 
-            <div className={classes.distanceInfoContainer}>
-              <CVText>Inglês</CVText>
-              <CVText>Avançado</CVText>
-            </div>
-
-            <div className={classes.distanceInfoContainer}>
-              <CVText>Alemão</CVText>
-              <CVText>Básico</CVText>
-            </div> */}
-
-            <p className={classes.infoSectionTitle}>{t('stackExperience')}</p>
+            <p className={classes.infoSectionTitle} style={{ fontSize: 15 }}>{t('stackExperience')}</p>
           </div>
 
           <StackExperienceRow Icon={ReactIcon} name="ReactJS" experience={`2 ${t('years')}`} />
@@ -217,7 +250,7 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
           <p className={classes.cvTitle}>Raphael Henrique Braga Leivas</p>
           <p className={classes.cvSubTitle}>
             {' '}
-            {t('subtitle')} - {CURRENT_AGE} {t('years')}
+            {t('subtitle')} - {CURRENT_AGE} {t('age')}
           </p>
 
           <p className={classes.infoSectionTitle}>{t('professionalExperience')}</p>
@@ -282,6 +315,25 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             activities={[t('cefet1')]}
             borderless
           />
+
+          <p className={classes.infoSectionTitle}>{t('languages')}</p>
+
+          <div className={classes.languagesList}>
+            <div className={classes.distanceInfoContainer}>
+              <CVText>{t('portuguese')}:</CVText>
+              <CVText>{t('native')}</CVText>
+            </div>
+
+            <div className={classes.distanceInfoContainer}>
+              <CVText>{t('english')}:</CVText>
+              <CVText>{t('advanced')}</CVText>
+            </div>
+
+            <div className={classes.distanceInfoContainer}>
+              <CVText>{t('german')}:</CVText>
+              <CVText>{t('basic')}</CVText>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -64,7 +64,7 @@ function App() {
         <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
           <Button
             onClick={handlePrint}
-            style={{ backgroundColor: COLORS.PRIMARY }}
+            style={{ backgroundColor: COLORS.PRIMARY, color: 'white' }}
             variant="contained"
           >
             Gerar Currículo
