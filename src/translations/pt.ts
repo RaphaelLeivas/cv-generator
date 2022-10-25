@@ -62,7 +62,7 @@ const pt = {
   cefet: 'Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG',
   cefet1: 'Ensino médio completo, curso técnico em Equipamentos Biomédicos.',
   languages: 'Idiomas',
-  portuguese: 'Portguês',
+  portuguese: 'Português',
   native: 'Nativo',
   english: 'Inglês',
   advanced: 'Avançado',
