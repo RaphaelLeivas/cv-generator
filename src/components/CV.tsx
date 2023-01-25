@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
   infoSectionSubtitle: {
     textTransform: 'uppercase',
     marginBottom: 2,
-    marginTop: 10,
+    marginTop: 5,
     fontSize: 14,
   },
   cvTitle: {
@@ -139,6 +139,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+    margin: '2px 0px 2px 0px',
   },
   wppIcon: {
     flex: 1,
@@ -149,6 +150,14 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+  },
+  socialsContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    margin: '4px 0px 8px 0px',
   }
 }))
 
@@ -176,18 +185,40 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             <CVText>raphaelhenrique2013@outlook.com</CVText>
             <CVText style={{ marginTop: '-2px' }} >rapha.lei8@gmail.com</CVText>
 
+            <hr style={{ margin: '2px' }} />
+
             <p className={classes.infoSectionSubtitle}>{t('residence')}</p>
             <CVText>Sagrada Família, Belo Horizonte, Minas Gerais, {t('brazil')}</CVText>
 
-            <p className={classes.infoSectionSubtitle}>{t('linkedin')}</p>
-            <a
-              href="https://www.linkedin.com/in/raphaelbleivas/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginTop: 6, marginBottom: 6 }}
-            >
-              /raphaelbleivas/
-            </a>
+            <hr style={{ margin: '2px' }} />
+
+            <div className={classes.socialsContainer}>
+              <div style={{ marginTop: 0 }}>
+                <p className={classes.infoSectionSubtitle}>{t('linkedin')}</p>
+                <a
+                  href="https://www.linkedin.com/in/raphaelbleivas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginTop: 6, marginBottom: 6 }}
+                >
+                  /raphaelbleivas/
+                </a>
+              </div>
+
+              <div style={{ marginTop: 0 }}>
+                <p className={classes.infoSectionSubtitle}>{t('github')}</p>
+                <a
+                  href="https://github.com/RaphaelLeivas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginTop: 6, marginBottom: 6 }}
+                >
+                  /RaphaelLeivas
+                </a>
+              </div>
+            </div>
+
+            <hr style={{ margin: '2px' }} />
 
             <div className={classes.phoneContainer}>
               <div className={classes.wppIcon}>
@@ -195,10 +226,12 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
 
               </div>
               <div className={classes.phoneInfo}>
-                <p className={classes.infoSectionSubtitle}>{t('phone')}</p>
+                <p className={classes.infoSectionSubtitle}>{t('phone')} / {t('whatsapp')}</p>
                 <CVText>(31) 9 9563 - 2802</CVText>
               </div>
             </div>
+
+            <hr style={{ margin: '2px' }} />
 
             <p className={classes.infoSectionTitle} style={{ fontSize: 15 }}>{t('stackExperience')}</p>
           </div>

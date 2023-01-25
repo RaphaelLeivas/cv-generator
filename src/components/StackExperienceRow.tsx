@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
 
     width: '100%',
-    marginTop: 6,
+    marginTop: 4,
   },
   stackItemRow: {
     width: '100%',
