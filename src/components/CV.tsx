@@ -251,13 +251,13 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
           <StackExperienceRow
             Icon={NodejsIcon}
             name="ExpressJS"
-            experience={`1 ${t('year')} ${t('and')} 6 ${t('months')}`}
+            experience={`2 ${t('years')}`}
           />
 
           <StackExperienceRow
             src={apiIcon}
             name="API REST"
-            experience={`1 ${t('year')} ${t('and')} 6 ${t('months')}`}
+            experience={`2 ${t('years')}`}
           />
 
           <StackExperienceRow

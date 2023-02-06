@@ -14,7 +14,7 @@ const en = {
   month: 'Month',
   months: 'Months',
   brazil: 'Brazil',
-  subtitle: 'React / React-Native Developer',
+  subtitle: 'Software Developer',
   professionalExperience: 'Professional Experience',
   techinicianDeveloper: 'Technician Developer',
   finatec: 'Foundation of Scientific and Technological Enterprises - Finatec',
@@ -60,7 +60,7 @@ const en = {
   systemsEngineerUndergraduate: 'Systems Engineering',
   ufmg: 'Federal University of Minas Gerais - UFMG',
   ufmg1:
-    'Studying 4th semester of Systems Engineering course, total of 12 semesters. Classes are at night on campus.',
+    'Studying 5th semester of Systems Engineering course, total of 12 semesters. Classes are at night on campus.',
   and: 'and',
   cefetTechinician: 'Techician Course',
   cefet: 'Federal Center of Techonological Education of Minas Gerais - CEFET-MG',
