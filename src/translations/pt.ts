@@ -58,7 +58,7 @@ const pt = {
   academicFormation: 'Formação Acadêmica',
   systemsEngineerUndergraduate: 'Engenharia de Sistemas',
   ufmg: 'Universidade Federal de Minas Gerais - UFMG',
-  ufmg1: 'Cursando 5° período do curso de Engenharia de Sistemas (noturno).',
+  ufmg1: 'Cursando 4° período do curso de Engenharia de Sistemas (noturno).',
   and: 'e',
   cefetTechinician: 'Curso técnico',
   cefet: 'Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG',

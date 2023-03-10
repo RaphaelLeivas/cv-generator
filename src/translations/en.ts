@@ -60,7 +60,7 @@ const en = {
   systemsEngineerUndergraduate: 'Systems Engineering',
   ufmg: 'Federal University of Minas Gerais - UFMG',
   ufmg1:
-    'Studying 5th semester of Systems Engineering course, total of 12 semesters. Classes are at night on campus.',
+    'Studying 4th semester of Systems Engineering course, total of 12 semesters. Classes are at night on campus.',
   and: 'and',
   cefetTechinician: 'Techician Course',
   cefet: 'Federal Center of Techonological Education of Minas Gerais - CEFET-MG',

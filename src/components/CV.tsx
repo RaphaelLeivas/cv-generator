@@ -292,7 +292,7 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             role={t('techinicianDeveloper')}
             company={t('finatec')}
             dateStart={'16 ' + t('february') + ' 2022'}
-            dateEnd={'16 ' + t('january') + ' 2023'}
+            dateEnd={'21 ' + t('march') + ' 2023'}
             activities={[t('techinician1'), t('techinician2'), t('techinician3'), t('techinician4')]}
           />
 
