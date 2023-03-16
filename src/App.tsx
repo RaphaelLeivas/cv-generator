@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useReactToPrint } from 'react-to-print'
-import { Select, InputLabel, MenuItem, FormControl, Button, TextField } from '@material-ui/core'
+import { Select, InputLabel, MenuItem, FormControl, Button, TextField, Switch, Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 
 import { formatLanguageCodeToText } from './utils/formatters'
@@ -14,6 +14,7 @@ const LANGUAGES_LIST = ['pt', 'en']
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('pt')
   const [title, setTitle] = useState('CV - RaphaelLeivas (BR)')
+  const [isAcademic, setIsAcademic] = useState(true)
 
   const componentRef = useRef(null)
   const handlePrint = useReactToPrint({
@@ -61,6 +62,20 @@ function App() {
           value={title}
         />
 
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Typography style={{ marginLeft: '8px' }}>
+            Profissional
+          </Typography>
+          <Switch
+            color="primary"
+            checked={isAcademic}
+            onChange={() => setIsAcademic((prev) => !prev)}
+          />
+          <Typography style={{ marginRight: '8px' }}>
+            Acadêmico
+          </Typography>
+        </div>
+
         <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
           <Button
             onClick={handlePrint}
@@ -72,7 +87,7 @@ function App() {
         </div>
       </div>
 
-      <CV ref={componentRef} />
+      <CV ref={componentRef} isAcademic={isAcademic} />
     </div>
   )
 }

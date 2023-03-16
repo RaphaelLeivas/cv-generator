@@ -61,10 +61,13 @@ const en = {
   ufmg: 'Federal University of Minas Gerais - UFMG',
   ufmg1:
     'Studying 4th semester of Systems Engineering course, total of 12 semesters. Classes are at night on campus.',
+  ufmg2: 'Iniciação Científica Voluntária de 1 ano em projeto de pesquisa "Sistema Portátil de Eletroestimulação neuromuscular controlado por aplicativo de celular", no laboratório de Engenharia Biomédica do Departamento de Engenharia Elétrica (LEB - UFMG).',
+  ufmg3: 'Representação da Atlética da Escola de Engenharia em competições universitárias CIA 2022 e Engenharíadas Mineiro 2022 - Equipe de Xadrez, medalhista de ouro.',
   and: 'and',
   cefetTechinician: 'Techician Course',
   cefet: 'Federal Center of Techonological Education of Minas Gerais - CEFET-MG',
   cefet1: 'High School completed, techinician course in Biomedical Equipments.',
+  cefet2: 'Certification Advanced - II in English emitted by CEFET Minas Foundation.',
   languages: 'Languages',
   portuguese: 'Portuguese',
   native: 'Native',

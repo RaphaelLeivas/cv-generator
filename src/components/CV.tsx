@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 22,
 
     marginBottom: 2,
-    marginTop: 2,
+    marginTop: -8,
   },
   cvSubTitle: {
     fontSize: 18,
@@ -133,7 +133,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'space-around',
 
-    marginBottom: '-12px'
+    marginBottom: '-12px',
+    marginTop: '-4px'
   },
   phoneContainer: {
     display: 'flex',
@@ -164,9 +165,14 @@ const useStyles = makeStyles((theme) => ({
 const HIDE_PROFILE_IMAGE = false
 const CURRENT_AGE = 21
 
-export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
+interface CVProps {
+  isAcademic: boolean
+}
+
+export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
   const classes = useStyles()
   const { t } = useTranslation()
+  const { isAcademic } = props
 
   return (
     <div ref={ref}>
@@ -281,10 +287,10 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
 
         <div className={classes.experienceSection}>
           <p className={classes.cvTitle}>Raphael Henrique Braga Leivas</p>
-          <p className={classes.cvSubTitle}>
+          {isAcademic ? <></> : <p className={classes.cvSubTitle}>
             {' '}
             {t('subtitle')} - {CURRENT_AGE} {t('age')}
-          </p>
+          </p>}
 
           <p className={classes.infoSectionTitle}>{t('professionalExperience')}</p>
 
@@ -293,7 +299,11 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             company={t('finatec')}
             dateStart={'16 ' + t('february') + ' 2022'}
             dateEnd={'21 ' + t('march') + ' 2023'}
-            activities={[t('techinician1'), t('techinician2'), t('techinician3'), t('techinician4')]}
+            activities={
+              isAcademic 
+                ? [t('techinician1'), t('techinician2'), t('techinician4')]
+                : [t('techinician1'), t('techinician2'), t('techinician3'), t('techinician4')]
+            }
           />
 
           <ProfessionalExperienceRow
@@ -301,7 +311,11 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             company={t('visuri')}
             dateStart={'14 ' + t('december') + ' 2020'}
             dateEnd={'15 ' + t('february') + ' 2022'}
-            activities={[t('developmentIntern1'), t('developmentIntern2'), t('developmentIntern3')]}
+            activities={
+              isAcademic 
+                ? [t('developmentIntern1'), t('developmentIntern3')]
+                : [t('developmentIntern1'), t('developmentIntern2'), t('developmentIntern3')]
+            }
           />
 
           <ProfessionalExperienceRow
@@ -309,7 +323,11 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             company={t('cpejr')}
             dateStart={'01 ' + t('july') + ' 2021'}
             dateEnd={'31 ' + t('december') + ' 2021'}
-            activities={[t('leadingDeveloper1'), t('leadingDeveloper2'), t('leadingDeveloper3')]}
+            activities={
+              isAcademic 
+                ? [t('leadingDeveloper2'), t('leadingDeveloper3')]
+                : [t('leadingDeveloper1'), t('leadingDeveloper2'), t('leadingDeveloper3')]
+            }
           />
 
           <ProfessionalExperienceRow
@@ -335,9 +353,12 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             role={t('systemsEngineerUndergraduate')}
             company={t('ufmg')}
             dateStart={'03 ' + t('march') + ' 2020'}
-            dateEnd={'31 ' + t('december') + ' 2026'}
-            activities={[t('ufmg1')]}
-            borderless
+            dateEnd={'31 ' + t('december') + ' 2025'}
+            activities={
+              isAcademic 
+                ? [t('ufmg1'), t('ufmg2'), t('ufmg3')]
+                : [t('ufmg1')]
+            }
           />
 
           <ProfessionalExperienceRow
@@ -345,7 +366,11 @@ export const CV = React.forwardRef<HTMLDivElement>((props, ref) => {
             company={t('cefet')}
             dateStart={'01 ' + t('february') + ' 2017'}
             dateEnd={'31 ' + t('november') + ' 2019'}
-            activities={[t('cefet1')]}
+            activities={
+              isAcademic 
+                ? [t('cefet1'), t('cefet2')]
+                : [t('cefet1')]
+            }
             borderless
           />
 
