@@ -7,20 +7,8 @@ import randomImage from '../assets/images/random.jpg'
 import { COLORS } from '../constants/colors'
 
 // stack icons / SVG
-import { ReactComponent as ReactIcon } from '../assets/images/stack/reactIcon.svg'
-import { ReactComponent as TypescriptIcon } from '../assets/images/stack/typescriptIcon.svg'
-import { ReactComponent as JavascriptIcon } from '../assets/images/stack/javascriptIcon.svg'
-import { ReactComponent as NodejsIcon } from '../assets/images/stack/nodejsIcon.svg'
-import { ReactComponent as MongodbIcon } from '../assets/images/stack/mongodbIcon.svg'
-import { ReactComponent as AwsIcon } from '../assets/images/stack/awsIcon.svg'
 import { ReactComponent as WhatsappIcon } from '../assets/images/whatsappIcon.svg'
 
-// stack icons / SVG
-import databaseIcon from '../assets/images/stack/databaseIcon.png'
-import scrumIcon from '../assets/images/stack/scrumIcon.png'
-import apiIcon from '../assets/images/stack/apiIcon.png'
-
-import { StackExperienceRow } from './StackExperienceRow'
 import { ProfessionalExperienceRow } from './ProfessionalExperienceRow'
 import { CVText } from './CVText'
 
@@ -52,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   experienceSection: {
     flex: 2.5,
     padding: 20,
+    paddingTop: 0,
 
     display: 'flex',
     flexDirection: 'column',
@@ -93,25 +82,25 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   infoSectionTitle: {
-    textTransform: 'uppercase',
+    textTransform: 'none',
     color: COLORS.PRIMARY,
     fontSize: 16,
     marginBottom: 4,
     marginTop: 10,
   },
   infoSectionSubtitle: {
-    textTransform: 'uppercase',
+    textTransform: 'none',
     marginBottom: 2,
     marginTop: 5,
     fontSize: 14,
   },
   cvTitle: {
-    textTransform: 'uppercase',
+    textTransform: 'none',
     color: COLORS.PRIMARY,
-    fontSize: 22,
+    fontSize: 32,
 
-    marginBottom: 2,
-    marginTop: -8,
+    marginBottom: 8,
+    marginTop: 8,
   },
   cvSubTitle: {
     fontSize: 18,
@@ -163,7 +152,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const HIDE_PROFILE_IMAGE = false
-const CURRENT_AGE = 21
+// const CURRENT_AGE = 21
 
 interface CVProps {
   isAcademic: boolean
@@ -178,6 +167,8 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
     <div ref={ref}>
       <div className={classes.root}>
         <div className={classes.infoSection}>
+          <p className={classes.cvTitle}>Raphael Henrique Braga Leivas</p>
+
           <img
             src={HIDE_PROFILE_IMAGE ? randomImage : profileImage}
             className={classes.profileImage}
@@ -185,22 +176,33 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
           />
 
           <div className={classes.textContainer}>
-            <p className={classes.infoSectionTitle}>{t('contact')}</p>
+            <p className={classes.infoSectionTitle}>Geburtsdaten</p>
+            <CVText>17.10.2001</CVText>
 
-            <p className={classes.infoSectionSubtitle}>{t('email')}</p>
+            <hr style={{ margin: '2px' }} />
+
+            <p className={classes.infoSectionTitle}>Zivilstand</p>
+            <CVText>Ledig, keine Kinder</CVText>
+
+            <hr style={{ margin: '2px' }} />
+
+            <p className={classes.infoSectionTitle}>{t('email')}</p>
             <CVText>raphaelhenrique2013@outlook.com</CVText>
             <CVText style={{ marginTop: '-2px' }} >rapha.lei8@gmail.com</CVText>
 
             <hr style={{ margin: '2px' }} />
 
-            <p className={classes.infoSectionSubtitle}>{t('residence')}</p>
-            <CVText>Sagrada Família, Belo Horizonte, Minas Gerais, {t('brazil')}</CVText>
+            <p className={classes.infoSectionTitle}>Adresse</p>
+            <CVText>Rua Célia de Souza, 322 apto 201, Sagrada Família, Belo Horizonte, Minas Gerais, {t('brazil')}</CVText>
 
             <hr style={{ margin: '2px' }} />
 
-            <div className={classes.socialsContainer}>
-              <div style={{ marginTop: 0 }}>
-                <p className={classes.infoSectionSubtitle}>{t('linkedin')}</p>
+            <div className={classes.phoneContainer}>
+              <div className={classes.wppIcon}>
+                <WhatsappIcon />
+              </div>
+              <div className={classes.phoneInfo}>
+                <p className={classes.infoSectionTitle}>LinkedIn</p>
                 <a
                   href="https://www.linkedin.com/in/raphaelbleivas/"
                   target="_blank"
@@ -208,18 +210,6 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                   style={{ marginTop: 6, marginBottom: 6 }}
                 >
                   /raphaelbleivas/
-                </a>
-              </div>
-
-              <div style={{ marginTop: 0 }}>
-                <p className={classes.infoSectionSubtitle}>{t('github')}</p>
-                <a
-                  href="https://github.com/RaphaelLeivas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ marginTop: 6, marginBottom: 6 }}
-                >
-                  /RaphaelLeivas
                 </a>
               </div>
             </div>
@@ -232,67 +222,39 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
 
               </div>
               <div className={classes.phoneInfo}>
-                <p className={classes.infoSectionSubtitle}>{t('phone')} / {t('whatsapp')}</p>
+                <p className={classes.infoSectionTitle}>Telefon / {t('whatsapp')}</p>
                 <CVText>(31) 9 9563 - 2802</CVText>
               </div>
             </div>
 
-            <hr style={{ margin: '2px' }} />
+            <hr style={{ margin: '2px', marginBottom: '8px' }} />
 
-            <p className={classes.infoSectionTitle} style={{ fontSize: 15 }}>{t('stackExperience')}</p>
+            <p className={classes.infoSectionTitle}>Core Competencies</p>
+            <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
+              <li><CVText>Software Development</CVText></li>
+              <li><CVText>Frontend, backend, databases</CVText></li>
+              <li><CVText>REST API</CVText></li>
+              <li><CVText>Agile methodologies</CVText></li>
+            </ul>
+
+            <hr style={{ margin: '2px', marginBottom: '8px' }} />
+
+            <p className={classes.infoSectionTitle}>Sprachen</p>
+            <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
+              <li><CVText>Portugiesisch: Muttersprache</CVText></li>
+              <li><CVText>Spanisch: Muttersprache</CVText></li>
+              <li><CVText>Englisch: Muttersprache</CVText></li>
+              <li><CVText>Deutsch: Muttersprache</CVText></li>
+            </ul>
+
           </div>
-
-          <StackExperienceRow Icon={ReactIcon} name="ReactJS" experience={`2 ${t('years')}`} />
-
-          <StackExperienceRow Icon={ReactIcon} name="React-Native" experience={`1 ${t('year')}`} />
-
-          <StackExperienceRow
-            Icon={TypescriptIcon}
-            name="Typescript"
-            experience={`1 ${t('year')}`}
-          />
-
-          <StackExperienceRow Icon={NodejsIcon} name="NodeJS" experience={`2 ${t('years')}`} />
-
-          <StackExperienceRow
-            Icon={NodejsIcon}
-            name="ExpressJS"
-            experience={`2 ${t('years')}`}
-          />
-
-          <StackExperienceRow
-            src={apiIcon}
-            name="API REST"
-            experience={`2 ${t('years')}`}
-          />
-
-          <StackExperienceRow
-            src={databaseIcon}
-            name="SQLite / PostgreSQL"
-            experience={`6 ${t('months')}`}
-          />
-
-          <StackExperienceRow Icon={MongodbIcon} name="MongoDB" experience={`6 ${t('months')}`} />
-
-          <StackExperienceRow Icon={AwsIcon} name="AWS / DevOps" experience={`2 ${t('months')}`} />
-
-          <StackExperienceRow
-            Icon={JavascriptIcon}
-            name="JS / HTML / CSS"
-            experience={`2 ${t('years')}`}
-          />
-
-          <StackExperienceRow src={scrumIcon} name="Scrum" experience={`2 ${t('years')}`} />
         </div>
 
         <div className={classes.experienceSection}>
-          <p className={classes.cvTitle}>Raphael Henrique Braga Leivas</p>
-          {isAcademic ? <></> : <p className={classes.cvSubTitle}>
-            {' '}
-            {t('subtitle')} - {CURRENT_AGE} {t('age')}
-          </p>}
+          <p className={classes.infoSectionTitle}>Kurzprofil</p>
 
-          <p className={classes.infoSectionTitle}>{t('professionalExperience')}</p>
+
+          <p className={classes.infoSectionTitle}>Berufliche Erfahrungen</p>
 
           <ProfessionalExperienceRow
             role={t('techinicianDeveloper')}
@@ -300,7 +262,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateStart={'16 ' + t('february') + ' 2022'}
             dateEnd={'21 ' + t('march') + ' 2023'}
             activities={
-              isAcademic 
+              isAcademic
                 ? [t('techinician1'), t('techinician2'), t('techinician4')]
                 : [t('techinician1'), t('techinician2'), t('techinician3'), t('techinician4')]
             }
@@ -312,7 +274,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateStart={'14 ' + t('december') + ' 2020'}
             dateEnd={'15 ' + t('february') + ' 2022'}
             activities={
-              isAcademic 
+              isAcademic
                 ? [t('developmentIntern1'), t('developmentIntern3')]
                 : [t('developmentIntern1'), t('developmentIntern2'), t('developmentIntern3')]
             }
@@ -324,7 +286,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateStart={'01 ' + t('july') + ' 2021'}
             dateEnd={'31 ' + t('december') + ' 2021'}
             activities={
-              isAcademic 
+              isAcademic
                 ? [t('leadingDeveloper2'), t('leadingDeveloper3')]
                 : [t('leadingDeveloper1'), t('leadingDeveloper2'), t('leadingDeveloper3')]
             }
@@ -347,7 +309,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             borderless
           />
 
-          <p className={classes.infoSectionTitle}>{t('academicFormation')}</p>
+          <p className={classes.infoSectionTitle}>Ausbildung</p>
 
           <ProfessionalExperienceRow
             role={t('systemsEngineerUndergraduate')}
@@ -355,7 +317,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateStart={'03 ' + t('march') + ' 2020'}
             dateEnd={'31 ' + t('december') + ' 2025'}
             activities={
-              isAcademic 
+              isAcademic
                 ? [t('ufmg1'), t('ufmg2'), t('ufmg3')]
                 : [t('ufmg1')]
             }
@@ -367,31 +329,12 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateStart={'01 ' + t('february') + ' 2017'}
             dateEnd={'31 ' + t('november') + ' 2019'}
             activities={
-              isAcademic 
+              isAcademic
                 ? [t('cefet1'), t('cefet2')]
                 : [t('cefet1')]
             }
             borderless
           />
-
-          <p className={classes.infoSectionTitle}>{t('languages')}</p>
-
-          <div className={classes.languagesList}>
-            <div className={classes.distanceInfoContainer}>
-              <CVText>{t('portuguese')}:</CVText>
-              <CVText>{t('native')}</CVText>
-            </div>
-
-            <div className={classes.distanceInfoContainer}>
-              <CVText>{t('english')}:</CVText>
-              <CVText>{t('advanced')}</CVText>
-            </div>
-
-            <div className={classes.distanceInfoContainer}>
-              <CVText>{t('german')}:</CVText>
-              <CVText>{t('basic')}</CVText>
-            </div>
-          </div>
         </div>
       </div>
     </div>
