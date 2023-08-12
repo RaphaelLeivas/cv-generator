@@ -8,6 +8,7 @@ import { COLORS } from '../constants/colors'
 
 // stack icons / SVG
 import { ReactComponent as WhatsappIcon } from '../assets/images/whatsappIcon.svg'
+import { ReactComponent as LinkedinIcon } from '../assets/images/linkedinIcon.svg'
 
 import { ProfessionalExperienceRow } from './ProfessionalExperienceRow'
 import { CVText } from './CVText'
@@ -140,6 +141,9 @@ const useStyles = makeStyles((theme) => ({
   wppIcon: {
     flex: 1,
   },
+  linkedinIcon: {
+    flex: 1,
+  },
   phoneInfo: {
     flex: 4,
 
@@ -204,7 +208,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
 
             <div className={classes.phoneContainer}>
               <div className={classes.wppIcon}>
-                <WhatsappIcon />
+                <LinkedinIcon />
               </div>
               <div className={classes.phoneInfo}>
                 <p className={classes.infoSectionTitle}>LinkedIn</p>
@@ -222,9 +226,8 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             <hr style={{ margin: '2px' }} />
 
             <div className={classes.phoneContainer}>
-              <div className={classes.wppIcon}>
+              <div className={classes.linkedinIcon}>
                 <WhatsappIcon />
-
               </div>
               <div className={classes.phoneInfo}>
                 <p className={classes.infoSectionTitle}>Telefon / {t('whatsapp')}</p>
@@ -259,9 +262,11 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
           <p className={classes.infoSectionTitleRight}>Kurzprofil</p>
 
           <CVText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Student im Ingenieurwesen mit 2 Jahren Berufserfahrung und abgeschlossenem Technikerkurs. 
+            Derzeit konzentriere ich mich ausschließlich auf das Universitätsstudium und die akademischen Möglichkeiten und 
+            entwickle mein akademisches Profil, um nach dem Grundstudium eine weitere Hochschulausbildung in 
+            ingenieurwissenschaftlicher Forschung und Innovation anzustreben.
           </CVText>
-
 
           <p className={classes.infoSectionTitleRight}>Berufliche Erfahrungen</p>
 
