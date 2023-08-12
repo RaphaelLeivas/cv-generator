@@ -86,6 +86,12 @@ const useStyles = makeStyles((theme) => ({
     color: COLORS.PRIMARY,
     fontSize: 16,
     marginBottom: 4,
+    marginTop: 6,
+  },
+  infoSectionTitleRight: {
+    color: COLORS.PRIMARY,
+    fontSize: 20,
+    marginBottom: 4,
     marginTop: 10,
   },
   infoSectionSubtitle: {
@@ -161,7 +167,6 @@ interface CVProps {
 export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
   const classes = useStyles()
   const { t } = useTranslation()
-  const { isAcademic } = props
 
   return (
     <div ref={ref}>
@@ -186,7 +191,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
 
             <hr style={{ margin: '2px' }} />
 
-            <p className={classes.infoSectionTitle}>{t('email')}</p>
+            <p className={classes.infoSectionTitle}>E-Mail</p>
             <CVText>raphaelhenrique2013@outlook.com</CVText>
             <CVText style={{ marginTop: '-2px' }} >rapha.lei8@gmail.com</CVText>
 
@@ -223,18 +228,19 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               </div>
               <div className={classes.phoneInfo}>
                 <p className={classes.infoSectionTitle}>Telefon / {t('whatsapp')}</p>
-                <CVText>(31) 9 9563 - 2802</CVText>
+                <CVText>+55 (31) 9 9563 - 2802</CVText>
               </div>
             </div>
 
             <hr style={{ margin: '2px', marginBottom: '8px' }} />
 
-            <p className={classes.infoSectionTitle}>Core Competencies</p>
+            <p className={classes.infoSectionTitle}>Kenntnisse & Fähigkeiten</p>
             <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
-              <li><CVText>Software Development</CVText></li>
-              <li><CVText>Frontend, backend, databases</CVText></li>
-              <li><CVText>REST API</CVText></li>
-              <li><CVText>Agile methodologies</CVText></li>
+              <li><CVText>Teamarbeit, Führung</CVText></li>
+              <li><CVText>Probleme lösen</CVText></li>
+              <li><CVText>Proaktivität</CVText></li>
+              <li><CVText>Leidenschaft für Technik, Software und Wissenschaft</CVText></li>
+              <li><CVText>Streben nach Exzellenz und hohen Qualitätsstandards</CVText></li>
             </ul>
 
             <hr style={{ margin: '2px', marginBottom: '8px' }} />
@@ -242,97 +248,84 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             <p className={classes.infoSectionTitle}>Sprachen</p>
             <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
               <li><CVText>Portugiesisch: Muttersprache</CVText></li>
-              <li><CVText>Spanisch: Muttersprache</CVText></li>
-              <li><CVText>Englisch: Muttersprache</CVText></li>
-              <li><CVText>Deutsch: Muttersprache</CVText></li>
+              <li><CVText>Spanisch: elementares Sprachniveau</CVText></li>
+              <li><CVText>Englisch: fortgeschrittenes Sprachniveau</CVText></li>
+              <li><CVText>Deutsch: mittleres Sprachniveau</CVText></li>
             </ul>
-
           </div>
         </div>
 
         <div className={classes.experienceSection}>
-          <p className={classes.infoSectionTitle}>Kurzprofil</p>
+          <p className={classes.infoSectionTitleRight}>Kurzprofil</p>
+
+          <CVText>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </CVText>
 
 
-          <p className={classes.infoSectionTitle}>Berufliche Erfahrungen</p>
+          <p className={classes.infoSectionTitleRight}>Berufliche Erfahrungen</p>
 
           <ProfessionalExperienceRow
-            role={t('techinicianDeveloper')}
-            company={t('finatec')}
-            dateStart={'16 ' + t('february') + ' 2022'}
-            dateEnd={'21 ' + t('march') + ' 2023'}
-            activities={
-              isAcademic
-                ? [t('techinician1'), t('techinician2'), t('techinician4')]
-                : [t('techinician1'), t('techinician2'), t('techinician3'), t('techinician4')]
-            }
+            role={"Technischer Entwickler"}
+            company={"Gründung wissenschaftlicher und technologischer Unternehmen - Finatec"}
+            dateStart={"16. Februar 2022"}
+            dateEnd={"21. Marsch 2023"}
+            activities={[
+              "Entwicklung mobiler Anwendungen für Elektrostimulationsgeräte unter Verwendung von NodeJS, React-Native, Typescript, SQLite und Bluetooth 5.0-Kommunikation.",
+              "Entwicklung und Wartung von Websystemen und REST-API zur Schnittstelle mit der mobilen Anwendung unter Verwendung von React, PostgreSQL, ExpressJS.",
+            ]}
           />
 
           <ProfessionalExperienceRow
-            role={t('developmentIntern')}
-            company={t('visuri')}
-            dateStart={'14 ' + t('december') + ' 2020'}
-            dateEnd={'15 ' + t('february') + ' 2022'}
-            activities={
-              isAcademic
-                ? [t('developmentIntern1'), t('developmentIntern3')]
-                : [t('developmentIntern1'), t('developmentIntern2'), t('developmentIntern3')]
-            }
+            role={"Entwicklungspraktikant"}
+            company={"Visuri-Ausrüstung und -Dienstleistungen LTDA"}
+            dateStart={"14. Dezember 2020"}
+            dateEnd={"15. Februar 2022"}
+            activities={[
+              "Entwicklung eines Websystems zur Verwaltung von COVID-19-Schnelltests mit NodeJS, React, ExpressJS, MongoDB.",
+              "Gerätetests, Wartung medizinischer Geräte. Berichterstattung."
+            ]}
           />
 
           <ProfessionalExperienceRow
-            role={t('leadingDeveloper')}
-            company={t('cpejr')}
-            dateStart={'01 ' + t('july') + ' 2021'}
-            dateEnd={'31 ' + t('december') + ' 2021'}
-            activities={
-              isAcademic
-                ? [t('leadingDeveloper2'), t('leadingDeveloper3')]
-                : [t('leadingDeveloper1'), t('leadingDeveloper2'), t('leadingDeveloper3')]
-            }
-          />
-
-          <ProfessionalExperienceRow
-            role={t('technologyConsultant')}
-            company={t('cpejr')}
-            dateStart={'01 ' + t('january') + ' 2021'}
-            dateEnd={'31 ' + t('june') + ' 2021'}
-            activities={[t('technologyConsultant1')]}
-          />
-
-          <ProfessionalExperienceRow
-            role={t('trainee')}
-            company={t('cpejr')}
-            dateStart={'01 ' + t('september') + ' 2020'}
-            dateEnd={'31 ' + t('december') + ' 2020'}
-            activities={[t('trainee1')]}
+            role={"Leitender Entwickler / Technologieberater"}
+            company={"Beratung und Elektroprojekte Junior - CPE Jr"}
+            dateStart={"1. Januar 2021"}
+            dateEnd={"31. Dezember 2021"}
+            activities={[
+              "Entwicklung von Websystemen mit NodeJS, React, DynamoDB, ExpressJS.",
+              "Unterstützung eines Teams von 5 Beratern bei Entwicklungsaufgaben. Verantwortlich für die endgültige Qualität des Codes und Produkts.",
+            ]}
             borderless
           />
 
-          <p className={classes.infoSectionTitle}>Ausbildung</p>
+          <p className={classes.infoSectionTitleRight}>Ausbildung</p>
 
           <ProfessionalExperienceRow
-            role={t('systemsEngineerUndergraduate')}
-            company={t('ufmg')}
-            dateStart={'03 ' + t('march') + ' 2020'}
-            dateEnd={'31 ' + t('december') + ' 2025'}
-            activities={
-              isAcademic
-                ? [t('ufmg1'), t('ufmg2'), t('ufmg3')]
-                : [t('ufmg1')]
-            }
+            role={"Systemen Ingenieurwissenschaften"}
+            company={"Bundesuniversität Minas Gerais - UFMG"}
+            dateStart={"3. Marsch 2020"}
+            dateEnd={"31. Dezember 2025"}
+            activities={[
+              "Derzeit im 7. Semester Systemen Ingenieurwissenschaften, von insgesamt 12.",
+              "Durchschnittlicher Leistungskoeffizient von 84,92 , wie aus dem Schulzeugnis hervorgeht.",
+              "Einjährige ehrenamtliche Bachelor-Forschungen in Biomedizintechnik, Forschungsprojekt mit dem Titel „Tragbares neuromuskuläres Elektrostimulationssystem, gesteuert durch eine mobile Anwendung“ im Labor für Biomedizintechnik.",
+              "Zwei Monate lang ehrenamtliche Bachelor-Forschungen in Raumfahrttechnik, Entwicklung eines unbemannten Luftfahrzeugs für Rettungsdienste im Labor für Biomedizintechnik mit der Gruppe Mechatronik, Steuerung und Robotik - MACRO.",
+              "Undergraduate Monitor-Stipendium für Infinitesimalrechnung III (Cálculo III) durch die Fakultät für Mathematik des Instituts für Exakte Wissenschaften (ICEx) im Jahr 2023.",
+              "Vertretung von Schule für Ingenieurwissenschaften Leichtathletik bei den Universitätswettbewerben CIA 2022 und Engenharíadas Mineiro 2022 - Schachmannschaft, Goldmedaillengewinner"
+            ]}
           />
 
           <ProfessionalExperienceRow
-            role={t('cefetTechinician')}
-            company={t('cefet')}
-            dateStart={'01 ' + t('february') + ' 2017'}
-            dateEnd={'31 ' + t('november') + ' 2019'}
-            activities={
-              isAcademic
-                ? [t('cefet1'), t('cefet2')]
-                : [t('cefet1')]
-            }
+            role={"Technischer Kurs"}
+            company={"Bundeszentrum für technologische Bildung von Minas Gerais - CEFET-MG"}
+            dateStart={"1. Februar 2017"}
+            dateEnd={"29. November 2019"}
+            activities={[
+              "Abitur abgeschlossen. Techniker für biomedizinische Geräte.",
+              "Durchschnittlicher Leistungskoeffizient von 86,64.",
+              "Advanced-Level-Zertifizierung - II in Englisch mit der CEFETMinas Foundation."
+            ]}
             borderless
           />
         </div>

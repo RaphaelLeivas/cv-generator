@@ -28,10 +28,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between'
   },
   infoSectionSubtitle: {
-    textTransform: 'uppercase',
+    textTransform: 'none',
     marginBottom: 2,
     marginTop: 2,
     fontSize: 14,
+    fontWeight: 600,
   },
   companyAndDates: {
     display: 'flex',
@@ -56,7 +57,7 @@ export const ProfessionalExperienceRow = ({
     >
       <div className={classes.professionalExperienceHeader}>
         <p className={classes.infoSectionSubtitle}>{role}</p>
-        <CVText italic style={{ margin: 0, marginLeft: 4, fontSize: 10 }}>
+        <CVText italic style={{ margin: 0, marginLeft: 4, fontSize: 10, textAlign: 'right' }}>
           {dateStart} - {dateEnd}
         </CVText>
       </div>
@@ -65,7 +66,7 @@ export const ProfessionalExperienceRow = ({
         {company}
       </CVText>
 
-      <ul style={{ marginTop: 4, marginBottom: 4 }}>
+      <ul style={{ marginTop: 4, marginBottom: 4, paddingLeft: 20 }}>
         {activities.map((activity, index) => (
           <li key={index} style={{ marginBottom: 4 }}>
             {activity}
