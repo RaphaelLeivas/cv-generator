@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   infoSectionSubtitle: {
     textTransform: 'none',
     marginBottom: 2,
-    marginTop: 2,
+    marginTop: 0,
     fontSize: 14,
     fontWeight: 600,
   },

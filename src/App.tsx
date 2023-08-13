@@ -13,7 +13,7 @@ const LANGUAGES_LIST = ['pt', 'en']
 
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('pt')
-  const [title, setTitle] = useState('CV - RaphaelLeivas (BR)')
+  const [title, setTitle] = useState('CV - RaphaelLeivas (DE)')
   const [isAcademic, setIsAcademic] = useState(true)
 
   const componentRef = useRef(null)

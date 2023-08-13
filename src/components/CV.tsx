@@ -93,7 +93,12 @@ const useStyles = makeStyles((theme) => ({
     color: COLORS.PRIMARY,
     fontSize: 20,
     marginBottom: 4,
-    marginTop: 10,
+    marginTop: 4,
+    fontWeight: 'bold',
+
+    '&:first-child': {
+      marginTop: 12,
+    }
   },
   infoSectionSubtitle: {
     textTransform: 'none',
@@ -250,10 +255,10 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
 
             <p className={classes.infoSectionTitle}>Sprachen</p>
             <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
-              <li><CVText>Portugiesisch: Muttersprache</CVText></li>
-              <li><CVText>Spanisch: elementares Sprachniveau</CVText></li>
-              <li><CVText>Englisch: fortgeschrittenes Sprachniveau</CVText></li>
-              <li><CVText>Deutsch: mittleres Sprachniveau</CVText></li>
+              <li><CVText><b>Portugiesisch</b>: Muttersprache</CVText></li>
+              <li><CVText><b>Englisch</b>: Exzellente Kenntnisse</CVText></li>
+              <li><CVText><b>Deutsch</b>: Selbstständige Sprachverwendung</CVText></li>
+              <li><CVText><b>Spanisch</b>: Elementare Sprachverwendung</CVText></li>
             </ul>
           </div>
         </div>
@@ -264,7 +269,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
           <CVText>
             Student im Ingenieurwesen mit 2 Jahren Berufserfahrung und abgeschlossenem Technikerkurs. 
             Derzeit konzentriere ich mich ausschließlich auf das Universitätsstudium und die akademischen Möglichkeiten und 
-            entwickle mein akademisches Profil, um nach dem Grundstudium eine weitere Hochschulausbildung in 
+            entwickle mein akademisches Profil, um nach dem Grundstudium weitere Graduiertenprogramme in 
             ingenieurwissenschaftlicher Forschung und Innovation anzustreben.
           </CVText>
 
@@ -276,8 +281,9 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateStart={"16. Februar 2022"}
             dateEnd={"21. Marsch 2023"}
             activities={[
-              "Entwicklung mobiler Anwendungen für Elektrostimulationsgeräte unter Verwendung von NodeJS, React-Native, Typescript, SQLite und Bluetooth 5.0-Kommunikation.",
-              "Entwicklung und Wartung von Websystemen und REST-API zur Schnittstelle mit der mobilen Anwendung unter Verwendung von React, PostgreSQL, ExpressJS.",
+              "Entwicklung und Wartung von Websystemen, mobilen Anwendungen und REST-API für Elektrostimulationsgeräte mit NodeJS-, React-Native-, Typescript-, SQLite- und Bluetooth 5.0-Kommunikation.",
+              "Erfahrung in einem interdisziplinären Team zur Projektentwicklung. Konfliktlösung zur Einhaltung von Projektanforderungen und Terminen.",
+              "Flexibilität und Kommunikation mit medizinischem Fachpersonal während der Produktentwicklung."
             ]}
           />
 
@@ -288,7 +294,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateEnd={"15. Februar 2022"}
             activities={[
               "Entwicklung eines Websystems zur Verwaltung von COVID-19-Schnelltests mit NodeJS, React, ExpressJS, MongoDB.",
-              "Gerätetests, Wartung medizinischer Geräte. Berichterstattung."
+              "Geräteprüfung, Wartung medizinischer Geräte. Berichterstattung. Erfahrung in Organisation, Wartungsmanagement und Qualitätskontrolle."
             ]}
           />
 
@@ -315,9 +321,9 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               "Derzeit im 7. Semester Systemen Ingenieurwissenschaften, von insgesamt 12.",
               "Durchschnittlicher Leistungskoeffizient von 84,92 , wie aus dem Schulzeugnis hervorgeht.",
               "Einjährige ehrenamtliche Bachelor-Forschungen in Biomedizintechnik, Forschungsprojekt mit dem Titel „Tragbares neuromuskuläres Elektrostimulationssystem, gesteuert durch eine mobile Anwendung“ im Labor für Biomedizintechnik.",
-              "Zwei Monate lang ehrenamtliche Bachelor-Forschungen in Raumfahrttechnik, Entwicklung eines unbemannten Luftfahrzeugs für Rettungsdienste im Labor für Biomedizintechnik mit der Gruppe Mechatronik, Steuerung und Robotik - MACRO.",
+              "Zwei Monate lang ehrenamtliche Bachelor-Forschungen in Raumfahrttechnik, Entwicklung eines unbemannten Luftfahrzeugs für Rettungsdienste mit der Gruppe Mechatronik, Steuerung und Robotik - MACRO.",
               "Undergraduate Monitor-Stipendium für Infinitesimalrechnung III (Cálculo III) durch die Fakultät für Mathematik des Instituts für Exakte Wissenschaften (ICEx) im Jahr 2023.",
-              "Vertretung von Schule für Ingenieurwissenschaften Leichtathletik bei den Universitätswettbewerben CIA 2022 und Engenharíadas Mineiro 2022 - Schachmannschaft, Goldmedaillengewinner"
+              "Vertretung von Schule für Ingenieurwissenschaften Leichtathletik bei den Universitätswettbewerben CIA 2022 und Engenharíadas Mineiro 2022 - Schachmannschaft, Goldmedaillengewinner."
             ]}
           />
 
@@ -329,7 +335,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             activities={[
               "Abitur abgeschlossen. Techniker für biomedizinische Geräte.",
               "Durchschnittlicher Leistungskoeffizient von 86,64.",
-              "Advanced-Level-Zertifizierung - II in Englisch mit der CEFETMinas Foundation."
+              "Advanced-Level-Zertifizierung - II in Englisch mit der CEFETMinas Gründung."
             ]}
             borderless
           />
