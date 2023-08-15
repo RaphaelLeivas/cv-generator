@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     flex: 2.5,
     padding: 20,
     paddingTop: 0,
+    paddingBottom: 0,
 
     display: 'flex',
     flexDirection: 'column',
@@ -323,9 +324,9 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               "Durchschnittlicher Leistungskoeffizient von 84,92 , wie aus dem Schulzeugnis hervorgeht.",
               "Einjährige ehrenamtliche Bachelor-Forschungen in Biomedizintechnik, Forschungsprojekt mit dem Titel „Tragbares neuromuskuläres Elektrostimulationssystem, gesteuert durch eine mobile Anwendung“ im Labor für Biomedizintechnik.",
               "Zwei Monate lang ehrenamtliche Bachelor-Forschungen in Raumfahrttechnik, Entwicklung eines unbemannten Luftfahrzeugs für Rettungsdienste mit der Gruppe Mechatronik, Steuerung und Robotik - MACRO.",
-              "Undergraduate Monitor-Stipendium für Analysis III (Cálculo III) durch die Fakultät für Mathematik des Instituts für Exakte Wissenschaften (ICEx) im Jahr 2023.",
+              "2023 Undergraduate Monitor-Stipendium für Analysis III (Cálculo III) durch die Fakultät für Mathematik des Instituts für Exakte Wissenschaften (ICEx).",
               "Vertretung von Schule für Ingenieurwissenschaften Leichtathletik bei den Universitätswettbewerben CIA 2022 und Engenharíadas Mineiro 2022 - Schachmannschaft, Goldmedaillengewinner.",
-              "Freiwilliger bei der Sommerschule für Brasilienstudien 2023. Interkultureller Austausch mit Studierenden aus über 20 verschiedenen Ländern."
+              "Zwei Wochen lang ehrenamtlich arbeiten bei der Sommerschule für Brasilienstudien 2023. Interkultureller Austausch mit Studierenden aus über 20 verschiedenen Ländern."
             ]}
           />
 
@@ -337,7 +338,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             activities={[
               "Abitur abgeschlossen. Techniker für biomedizinische Geräte.",
               "Durchschnittlicher Leistungskoeffizient von 86,64.",
-              "Advanced-Level-Zertifizierung - II in Englisch mit der CEFETMinas Gründung."
+              "Ausgezeichnet mit dem 2. Platz beim 29. META, mit der Entwicklung und Präsentation eines elektronischen Projekts mit dem Titel „Einsatz von Beschleunigungsmessern bei der physiotherapeutischen Erholung“.",
             ]}
             borderless
           />

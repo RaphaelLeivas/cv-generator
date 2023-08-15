@@ -68,7 +68,7 @@ export const ProfessionalExperienceRow = ({
         {company}
       </CVText>
 
-      <ul style={{ marginTop: 4, marginBottom: 4, paddingLeft: 20 }}>
+      <ul style={{ marginTop: 3, marginBottom: 3, paddingLeft: 20 }}>
         {activities.map((activity, index) => (
           <li key={index} style={{ marginBottom: 4 }}>
             {activity}
