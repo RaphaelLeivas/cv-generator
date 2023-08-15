@@ -207,7 +207,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             <hr style={{ margin: '2px' }} />
 
             <p className={classes.infoSectionTitle}>Adresse</p>
-            <CVText>Rua Célia de Souza, 322 apto 201, Sagrada Família, Belo Horizonte, Minas Gerais, {t('brazil')}</CVText>
+            <CVText>Célia de Souza Straße 322 apto 201, Sagrada Família, Belo Horizonte, Minas Gerais, Brasilien</CVText>
 
             <hr style={{ margin: '2px' }} />
 
@@ -257,7 +257,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
               <li><CVText><b>Portugiesisch</b>: Muttersprache</CVText></li>
               <li><CVText><b>Englisch</b>: Exzellente Kenntnisse</CVText></li>
-              <li><CVText><b>Deutsch</b>: Selbstständige Sprachverwendung</CVText></li>
+              <li><CVText><b>Deutsch</b>: B1 - onSET Deutsch</CVText></li>
               <li><CVText><b>Spanisch</b>: Elementare Sprachverwendung</CVText></li>
             </ul>
           </div>
@@ -277,7 +277,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
 
           <ProfessionalExperienceRow
             role={"Technischer Entwickler"}
-            company={"Gründung wissenschaftlicher und technologischer Unternehmen - Finatec"}
+            company={"Stiftung für wissenschaftliche und technologische Unternehmung - Finatec"}
             dateStart={"16. Februar 2022"}
             dateEnd={"21. Marsch 2023"}
             activities={[
@@ -300,6 +300,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
 
           <ProfessionalExperienceRow
             role={"Leitender Entwickler / Technologieberater"}
+            smallRole
             company={"Beratung und Elektroprojekte Junior - CPE Jr"}
             dateStart={"1. Januar 2021"}
             dateEnd={"31. Dezember 2021"}
@@ -322,8 +323,9 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               "Durchschnittlicher Leistungskoeffizient von 84,92 , wie aus dem Schulzeugnis hervorgeht.",
               "Einjährige ehrenamtliche Bachelor-Forschungen in Biomedizintechnik, Forschungsprojekt mit dem Titel „Tragbares neuromuskuläres Elektrostimulationssystem, gesteuert durch eine mobile Anwendung“ im Labor für Biomedizintechnik.",
               "Zwei Monate lang ehrenamtliche Bachelor-Forschungen in Raumfahrttechnik, Entwicklung eines unbemannten Luftfahrzeugs für Rettungsdienste mit der Gruppe Mechatronik, Steuerung und Robotik - MACRO.",
-              "Undergraduate Monitor-Stipendium für Infinitesimalrechnung III (Cálculo III) durch die Fakultät für Mathematik des Instituts für Exakte Wissenschaften (ICEx) im Jahr 2023.",
-              "Vertretung von Schule für Ingenieurwissenschaften Leichtathletik bei den Universitätswettbewerben CIA 2022 und Engenharíadas Mineiro 2022 - Schachmannschaft, Goldmedaillengewinner."
+              "Undergraduate Monitor-Stipendium für Analysis III (Cálculo III) durch die Fakultät für Mathematik des Instituts für Exakte Wissenschaften (ICEx) im Jahr 2023.",
+              "Vertretung von Schule für Ingenieurwissenschaften Leichtathletik bei den Universitätswettbewerben CIA 2022 und Engenharíadas Mineiro 2022 - Schachmannschaft, Goldmedaillengewinner.",
+              "Freiwilliger bei der Sommerschule für Brasilienstudien 2023. Interkultureller Austausch mit Studierenden aus über 20 verschiedenen Ländern."
             ]}
           />
 
