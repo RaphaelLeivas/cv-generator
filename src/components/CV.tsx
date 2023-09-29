@@ -191,13 +191,13 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
           />
 
           <div className={classes.textContainer}>
-            <p className={classes.infoSectionTitle}>Geburtsdaten</p>
-            <CVText>17.10.2001</CVText>
+            <p className={classes.infoSectionTitle}>Birthday</p>
+            <CVText>17/10/2001</CVText>
 
             <hr style={{ margin: '2px' }} />
 
-            <p className={classes.infoSectionTitle}>Zivilstand</p>
-            <CVText>Ledig, keine Kinder</CVText>
+            <p className={classes.infoSectionTitle}>Civil status</p>
+            <CVText>Single, no children</CVText>
 
             <hr style={{ margin: '2px' }} />
 
@@ -207,8 +207,8 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
 
             <hr style={{ margin: '2px' }} />
 
-            <p className={classes.infoSectionTitle}>Adresse</p>
-            <CVText>Célia de Souza Straße 322 apto 201, Sagrada Família, Belo Horizonte, Minas Gerais, Brasilien</CVText>
+            <p className={classes.infoSectionTitle}>Residential Address</p>
+            <CVText>Street Célia de Souza 322 apto 201, Sagrada Família, Belo Horizonte, Minas Gerais, Brazil</CVText>
 
             <hr style={{ margin: '2px' }} />
 
@@ -236,109 +236,110 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 <WhatsappIcon />
               </div>
               <div className={classes.phoneInfo}>
-                <p className={classes.infoSectionTitle}>Telefon / {t('whatsapp')}</p>
+                <p className={classes.infoSectionTitle}>Phone / {t('whatsapp')}</p>
                 <CVText>+55 (31) 9 9563 - 2802</CVText>
               </div>
             </div>
 
             <hr style={{ margin: '2px', marginBottom: '8px' }} />
 
-            <p className={classes.infoSectionTitle}>Kenntnisse & Fähigkeiten</p>
+            <p className={classes.infoSectionTitle}>Knowledge and skills</p>
             <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
-              <li><CVText>Teamarbeit, Führung</CVText></li>
-              <li><CVText>Probleme lösen</CVText></li>
-              <li><CVText>Proaktivität</CVText></li>
-              <li><CVText>Leidenschaft für Technik, Software und Wissenschaft</CVText></li>
-              <li><CVText>Streben nach Exzellenz und hohen Qualitätsstandards</CVText></li>
+              <li><CVText>Teamwork, Leadership</CVText></li>
+              <li><CVText>Problem Solving</CVText></li>
+              <li><CVText>Proactivity</CVText></li>
+              <li><CVText>Passionate about technology, software and science</CVText></li>
+              <li><CVText>Strive for excellence and high quality standards</CVText></li>
             </ul>
 
             <hr style={{ margin: '2px', marginBottom: '8px' }} />
 
-            <p className={classes.infoSectionTitle}>Sprachen</p>
+            <p className={classes.infoSectionTitle}>Languages</p>
             <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
-              <li><CVText><b>Portugiesisch</b>: Muttersprache</CVText></li>
-              <li><CVText><b>Englisch</b>: Exzellente Kenntnisse</CVText></li>
-              <li><CVText><b>Deutsch</b>: B1 - onSET Deutsch</CVText></li>
-              <li><CVText><b>Spanisch</b>: Elementare Sprachverwendung</CVText></li>
+              <li><CVText><b>Portuguese</b>: Native Language</CVText></li>
+              <li><CVText><b>English</b>: Excellent knowledge</CVText></li>
+              <li><CVText><b>German</b>: B1 - onSET Deutsch</CVText></li>
+              <li><CVText><b>Spanish</b>: Elementary language use</CVText></li>
             </ul>
           </div>
         </div>
 
         <div className={classes.experienceSection}>
-          <p className={classes.infoSectionTitleRight}>Kurzprofil</p>
+          <p className={classes.infoSectionTitleRight}>Profile</p>
 
           <CVText>
-            Student im Ingenieurwesen mit 2 Jahren Berufserfahrung und abgeschlossenem Technikerkurs. 
-            Derzeit konzentriere ich mich ausschließlich auf das Universitätsstudium und die akademischen Möglichkeiten und 
-            entwickle mein akademisches Profil, um nach dem Grundstudium weitere Graduiertenprogramme in 
-            ingenieurwissenschaftlicher Forschung und Innovation anzustreben.
+            Engineering student with 2 years of professional experience and completed technician course.
+            Currently I am focusing exclusively on my university studies and academic opportunities.
+            In the future, I seek to participate in 
+            engineering research and innovation either at companies or graduate programs.
           </CVText>
 
-          <p className={classes.infoSectionTitleRight}>Berufliche Erfahrungen</p>
+          <p className={classes.infoSectionTitleRight}>Professional Experience</p>
 
           <ProfessionalExperienceRow
-            role={"Technischer Entwickler"}
-            company={"Stiftung für wissenschaftliche und technologische Unternehmung - Finatec"}
-            dateStart={"16. Februar 2022"}
-            dateEnd={"21. Marsch 2023"}
+            role={"Technician Developer"}
+            company={"Foundation of Scientific and Technological Enterprises - Finatec"}
+            dateStart={"16 February 2022"}
+            dateEnd={"21 March 2023"}
             activities={[
-              "Entwicklung und Wartung von Websystemen, mobilen Anwendungen und REST-API für Elektrostimulationsgeräte mit NodeJS-, React-Native-, Typescript-, SQLite- und Bluetooth 5.0-Kommunikation.",
-              "Erfahrung in einem interdisziplinären Team zur Projektentwicklung. Konfliktlösung zur Einhaltung von Projektanforderungen und Terminen.",
-              "Flexibilität und Kommunikation mit medizinischem Fachpersonal während der Produktentwicklung."
+              "Development and maintenance of web systems, mobile applications and REST API for electrical stimulation devices using NodeJS, React Native, Typescript, SQLite and Bluetooth 5.0 communication.",
+              "Experience in an interdisciplinary team for project development. Conflict resolution to meet project requirements and deadlines.",
+              "Flexibility and communication with medical professionals during product development."
             ]}
           />
 
           <ProfessionalExperienceRow
-            role={"Entwicklungspraktikant"}
-            company={"Visuri-Ausrüstung und -Dienstleistungen LTDA"}
-            dateStart={"14. Dezember 2020"}
-            dateEnd={"15. Februar 2022"}
+            role={"Development Intern"}
+            company={"Visuri Equipments and Services SA"}
+            dateStart={"14 December 2020"}
+            dateEnd={"15 February 2022"}
             activities={[
-              "Entwicklung eines Websystems zur Verwaltung von COVID-19-Schnelltests mit NodeJS, React, ExpressJS, MongoDB.",
-              "Geräteprüfung, Wartung medizinischer Geräte. Berichterstattung. Erfahrung in Organisation, Wartungsmanagement und Qualitätskontrolle."
+              "Development of a web system to manage quick COVID-19 tests using NodeJS, React, ExpressJS, MongoDB.",
+              "Equipment testing, medical equipment maintenance. Reporting. Experience in organization, maintenance management and quality control."
             ]}
           />
 
           <ProfessionalExperienceRow
-            role={"Leitender Entwickler / Technologieberater"}
+            role={"Technology Consultant / Lead Developer"}
             smallRole
-            company={"Beratung und Elektroprojekte Junior - CPE Jr"}
-            dateStart={"1. Januar 2021"}
-            dateEnd={"31. Dezember 2021"}
+            company={"Junior Electrical Projects and Consulting - CPE Jr"}
+            dateStart={"1 January 2021"}
+            dateEnd={"31 December 2021"}
             activities={[
-              "Entwicklung von Websystemen mit NodeJS, React, DynamoDB, ExpressJS.",
-              "Unterstützung eines Teams von 5 Beratern bei Entwicklungsaufgaben. Verantwortlich für die endgültige Qualität des Codes und Produkts.",
+              "Development of web systems with NodeJS, React, DynamoDB, ExpressJS.",
+              "Technical support of a 5 consultant-team with development tasks. Responsible for the final quality of the code and product.",
+              "Firmware development with ESP32 for measuring temperature and acceleration sensors, with communication via Wi-Fi with developed REST API, for remote monitoring of equipments and engines."
             ]}
             borderless
           />
 
-          <p className={classes.infoSectionTitleRight}>Ausbildung</p>
+          <p className={classes.infoSectionTitleRight}>Academic Formation</p>
 
           <ProfessionalExperienceRow
-            role={"Systemen Ingenieurwissenschaften"}
-            company={"Bundesuniversität Minas Gerais - UFMG"}
-            dateStart={"3. Marsch 2020"}
-            dateEnd={"31. Dezember 2025"}
+            role={"Systems Engineering"}
+            company={"Federal University of Minas Gerais - UFMG"}
+            dateStart={"3 March 2020"}
+            dateEnd={"31 December 2026"}
             activities={[
-              "Derzeit im 7. Semester Systemen Ingenieurwissenschaften, von insgesamt 12.",
-              "Durchschnittlicher Leistungskoeffizient von 84,92 , wie aus dem Schulzeugnis hervorgeht.",
-              "Einjährige ehrenamtliche Bachelor-Forschungen in Biomedizintechnik, Forschungsprojekt mit dem Titel „Tragbares neuromuskuläres Elektrostimulationssystem, gesteuert durch eine mobile Anwendung“ im Labor für Biomedizintechnik.",
-              "Zwei Monate lang ehrenamtliche Bachelor-Forschungen in Raumfahrttechnik, Entwicklung eines unbemannten Luftfahrzeugs für Rettungsdienste mit der Gruppe Mechatronik, Steuerung und Robotik - MACRO.",
-              "2023 Undergraduate Monitor-Stipendium für Analysis III (Cálculo III) durch die Fakultät für Mathematik des Instituts für Exakte Wissenschaften (ICEx).",
-              "Vertretung von Schule für Ingenieurwissenschaften Leichtathletik bei den Universitätswettbewerben CIA 2022 und Engenharíadas Mineiro 2022 - Schachmannschaft, Goldmedaillengewinner.",
-              "Zwei Wochen lang ehrenamtlich arbeiten bei der Sommerschule für Brasilienstudien 2023. Interkultureller Austausch mit Studierenden aus über 20 verschiedenen Ländern."
+              "Currently in the 7th semester of Systems Engineering course, total of 12.",
+              "Average performance coefficient of 84.92, as shown in the university records.",
+              "One-year voluntary scientific initiation in biomedical engineering, research project entitled “Wearable neuromuscular electrical stimulation system controlled by a mobile application” in the biomedical engineering laboratory.",
+              "Three months of voluntary scientific initiation in aerospace technology, development of an unmanned aircraft for emergency services with the Mechatronics, Control and Robotics group - MACRO.",
+              "Scholarship for Undergraduate Monitor / Tutor in Calculus III (Vector Calculus) by the Faculty of Mathematics of the Institute of Exact Sciences (ICEx) for the year 2023.",
+              "Representation of School of Engineering Athletics at university competitions CIA 2022 and Engenharíadas Mineiro 2022 - Chess team, gold medalist.",
+              "Volunteer for two weeks at the Summer School of Brazilian Studies 2023. Intercultural exchange with students from over 20 different countries."
             ]}
           />
 
           <ProfessionalExperienceRow
-            role={"Technischer Kurs"}
-            company={"Bundeszentrum für technologische Bildung von Minas Gerais - CEFET-MG"}
-            dateStart={"1. Februar 2017"}
-            dateEnd={"29. November 2019"}
+            role={"Technician Course"}
+            company={"Federal Center of Technological Education of Minas Gerais - CEFET-MG"}
+            dateStart={"1 February 2017"}
+            dateEnd={"29 November 2019"}
             activities={[
-              "Abitur abgeschlossen. Techniker für biomedizinische Geräte.",
-              "Durchschnittlicher Leistungskoeffizient von 86,64.",
-              "Ausgezeichnet mit dem 2. Platz beim 29. META, mit der Entwicklung und Präsentation eines elektronischen Projekts mit dem Titel „Einsatz von Beschleunigungsmessern bei der physiotherapeutischen Erholung“.",
+              "Technician in Biomedical Equipments.",
+              "Completed high school with an average coefficient of performance of 86.64.",
+              "Awarded 2nd place at the 29th META, with the development and presentation of an electronic project entitled “Use of accelerometers in physiotherapy recovery”.",
             ]}
             borderless
           />
