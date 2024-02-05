@@ -257,7 +257,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             <p className={classes.infoSectionTitle}>Languages</p>
             <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
               <li><CVText><b>Portuguese</b>: Native Language</CVText></li>
-              <li><CVText><b>English</b>: Excellent knowledge</CVText></li>
+              <li><CVText><b>English</b>: C1 - CENEX FALE</CVText></li>
               <li><CVText><b>German</b>: B1 - onSET Deutsch</CVText></li>
               <li><CVText><b>Spanish</b>: Elementary language use</CVText></li>
             </ul>
@@ -324,7 +324,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               "Currently in the 7th semester of Systems Engineering course, total of 12.",
               "Average performance coefficient of 84.92, as shown in the university records.",
               "One-year voluntary scientific initiation in biomedical engineering, research project entitled “Wearable neuromuscular electrical stimulation system controlled by a mobile application” in the biomedical engineering laboratory.",
-              "Three months of voluntary scientific initiation in aerospace technology, development of an unmanned aircraft for emergency services with the Mechatronics, Control and Robotics group - MACRO.",
+              "Six months of voluntary scientific initiation in aerospace technology, development of an unmanned aircraft for emergency services with the Mechatronics, Control and Robotics group - MACRO.",
               "Scholarship for Undergraduate Monitor / Tutor in Calculus III (Vector Calculus) by the Faculty of Mathematics of the Institute of Exact Sciences (ICEx) for the year 2023.",
               "Representation of School of Engineering Athletics at university competitions CIA 2022 and Engenharíadas Mineiro 2022 - Chess team, gold medalist.",
               "Volunteer for two weeks at the Summer School of Brazilian Studies 2023. Intercultural exchange with students from over 20 different countries."
