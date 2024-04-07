@@ -9,11 +9,11 @@ import './translations/i18n'
 import { CV } from './components/CV'
 import { COLORS } from './constants/colors'
 
-const LANGUAGES_LIST = ['pt', 'en']
+const LANGUAGES_LIST = ['pt', 'en', 'de']
 
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('pt')
-  const [title, setTitle] = useState('CV - RaphaelLeivas (BR)')
+  const [title, setTitle] = useState('CV - RaphaelLeivas (DE)')
   const [isAcademic, setIsAcademic] = useState(true)
 
   const componentRef = useRef(null)

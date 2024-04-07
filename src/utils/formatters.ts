@@ -3,8 +3,10 @@ export const formatLanguageCodeToText = (languageCode: string): string => {
     case 'pt':
       return 'Português'
     case 'en':
-      return 'Inglês'
+      return 'English'
+    case 'de':
+      return 'Deutsch'
     default:
-      return 'Portguês'
+      return 'Português'
   }
 }

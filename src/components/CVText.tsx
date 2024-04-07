@@ -23,6 +23,7 @@ export const CVText = ({ children, style, italic }: CVTextProps) =>
       style={{
         marginTop: 6,
         marginBottom: 6,
+        // fontSize: '15px',
         ...style,
       }}
     >

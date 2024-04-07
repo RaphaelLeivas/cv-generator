@@ -7,20 +7,9 @@ import randomImage from '../assets/images/random.jpg'
 import { COLORS } from '../constants/colors'
 
 // stack icons / SVG
-import { ReactComponent as ReactIcon } from '../assets/images/stack/reactIcon.svg'
-import { ReactComponent as TypescriptIcon } from '../assets/images/stack/typescriptIcon.svg'
-import { ReactComponent as JavascriptIcon } from '../assets/images/stack/javascriptIcon.svg'
-import { ReactComponent as NodejsIcon } from '../assets/images/stack/nodejsIcon.svg'
-import { ReactComponent as MongodbIcon } from '../assets/images/stack/mongodbIcon.svg'
-import { ReactComponent as AwsIcon } from '../assets/images/stack/awsIcon.svg'
 import { ReactComponent as WhatsappIcon } from '../assets/images/whatsappIcon.svg'
+import { ReactComponent as LinkedinIcon } from '../assets/images/linkedinIcon.svg'
 
-// stack icons / SVG
-import databaseIcon from '../assets/images/stack/databaseIcon.png'
-import scrumIcon from '../assets/images/stack/scrumIcon.png'
-import apiIcon from '../assets/images/stack/apiIcon.png'
-
-import { StackExperienceRow } from './StackExperienceRow'
 import { ProfessionalExperienceRow } from './ProfessionalExperienceRow'
 import { CVText } from './CVText'
 
@@ -52,6 +41,8 @@ const useStyles = makeStyles((theme) => ({
   experienceSection: {
     flex: 2.5,
     padding: 20,
+    paddingTop: 0,
+    paddingBottom: 0,
 
     display: 'flex',
     flexDirection: 'column',
@@ -93,25 +84,36 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   infoSectionTitle: {
-    textTransform: 'uppercase',
+    textTransform: 'none',
     color: COLORS.PRIMARY,
     fontSize: 16,
     marginBottom: 4,
-    marginTop: 10,
+    marginTop: 6,
+  },
+  infoSectionTitleRight: {
+    color: COLORS.PRIMARY,
+    fontSize: 20,
+    marginBottom: 4,
+    marginTop: 4,
+    fontWeight: 'bold',
+
+    '&:first-child': {
+      marginTop: 12,
+    }
   },
   infoSectionSubtitle: {
-    textTransform: 'uppercase',
+    textTransform: 'none',
     marginBottom: 2,
     marginTop: 5,
     fontSize: 14,
   },
   cvTitle: {
-    textTransform: 'uppercase',
+    textTransform: 'none',
     color: COLORS.PRIMARY,
-    fontSize: 22,
+    fontSize: 32,
 
-    marginBottom: 2,
-    marginTop: -8,
+    marginBottom: 8,
+    marginTop: 8,
   },
   cvSubTitle: {
     fontSize: 18,
@@ -145,6 +147,9 @@ const useStyles = makeStyles((theme) => ({
   wppIcon: {
     flex: 1,
   },
+  linkedinIcon: {
+    flex: 1,
+  },
   phoneInfo: {
     flex: 4,
 
@@ -163,7 +168,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const HIDE_PROFILE_IMAGE = false
-const CURRENT_AGE = 21
+// const CURRENT_AGE = 21
 
 interface CVProps {
   isAcademic: boolean
@@ -172,12 +177,13 @@ interface CVProps {
 export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
   const classes = useStyles()
   const { t } = useTranslation()
-  const { isAcademic } = props
 
   return (
     <div ref={ref}>
       <div className={classes.root}>
         <div className={classes.infoSection}>
+          <p className={classes.cvTitle}>Raphael Henrique Braga Leivas</p>
+
           <img
             src={HIDE_PROFILE_IMAGE ? randomImage : profileImage}
             className={classes.profileImage}
@@ -185,22 +191,34 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
           />
 
           <div className={classes.textContainer}>
-            <p className={classes.infoSectionTitle}>{t('contact')}</p>
+            <p className={classes.infoSectionTitle}>{t('birthday')}</p>
+            <CVText>17/10/2001</CVText>
 
-            <p className={classes.infoSectionSubtitle}>{t('email')}</p>
+            <hr style={{ margin: '2px' }} />
+
+            <p className={classes.infoSectionTitle}>{t('civilStatus')}</p>
+            <CVText>{t('currentCivilStatus')}</CVText>
+
+            <hr style={{ margin: '2px' }} />
+
+            <p className={classes.infoSectionTitle}>{t('email')}</p>
             <CVText>raphaelhenrique2013@outlook.com</CVText>
             <CVText style={{ marginTop: '-2px' }} >rapha.lei8@gmail.com</CVText>
 
             <hr style={{ margin: '2px' }} />
 
-            <p className={classes.infoSectionSubtitle}>{t('residence')}</p>
-            <CVText>Sagrada Família, Belo Horizonte, Minas Gerais, {t('brazil')}</CVText>
+            <p className={classes.infoSectionTitle}>{t('residentialAddress')}</p>
+            <CVText>{t('street')} Célia de Souza 322 apto 201, Sagrada Família, Belo Horizonte, Minas Gerais, {t('brazil')}</CVText>
+            <CVText>{t('zipcode')}: 31030-500</CVText>
 
             <hr style={{ margin: '2px' }} />
 
-            <div className={classes.socialsContainer}>
-              <div style={{ marginTop: 0 }}>
-                <p className={classes.infoSectionSubtitle}>{t('linkedin')}</p>
+            <div className={classes.phoneContainer}>
+              <div className={classes.wppIcon}>
+                <LinkedinIcon />
+              </div>
+              <div className={classes.phoneInfo}>
+                <p className={classes.infoSectionTitle}>LinkedIn</p>
                 <a
                   href="https://www.linkedin.com/in/raphaelbleivas/"
                   target="_blank"
@@ -210,188 +228,143 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                   /raphaelbleivas/
                 </a>
               </div>
-
-              <div style={{ marginTop: 0 }}>
-                <p className={classes.infoSectionSubtitle}>{t('github')}</p>
-                <a
-                  href="https://github.com/RaphaelLeivas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ marginTop: 6, marginBottom: 6 }}
-                >
-                  /RaphaelLeivas
-                </a>
-              </div>
             </div>
 
             <hr style={{ margin: '2px' }} />
 
             <div className={classes.phoneContainer}>
-              <div className={classes.wppIcon}>
+              <div className={classes.linkedinIcon}>
                 <WhatsappIcon />
-
               </div>
               <div className={classes.phoneInfo}>
-                <p className={classes.infoSectionSubtitle}>{t('phone')} / {t('whatsapp')}</p>
-                <CVText>(31) 9 9563 - 2802</CVText>
+                <p className={classes.infoSectionTitle}>{t('phone')} / {t('whatsapp')}</p>
+                <CVText>+55 (31) 9 9563 - 2802</CVText>
               </div>
             </div>
 
-            <hr style={{ margin: '2px' }} />
+            <hr style={{ margin: '2px', marginBottom: '8px' }} />
 
-            <p className={classes.infoSectionTitle} style={{ fontSize: 15 }}>{t('stackExperience')}</p>
+            <p className={classes.infoSectionTitle}>{t('knowlegde')}</p>
+            <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
+              <li><CVText>{t('knowlegde1')}</CVText></li>
+              <li><CVText>{t('knowlegde2')}</CVText></li>
+              <li><CVText>{t('knowlegde3')}</CVText></li>
+              <li><CVText>{t('knowlegde4')}</CVText></li>
+              <li><CVText>{t('knowlegde5')}</CVText></li>
+            </ul>
+
+            <hr style={{ margin: '2px', marginBottom: '8px' }} />
+
+            <p className={classes.infoSectionTitle}>{t('languages')}</p>
+            <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
+              <li><CVText><b>{t('language1Name')}</b>: {t('language1Level')}</CVText></li>
+              <li><CVText><b>{t('language2Name')}</b>: {t('language2Level')}</CVText></li>
+              <li><CVText><b>{t('language3Name')}</b>: {t('language3Level')}</CVText></li>
+              <li><CVText><b>{t('language4Name')}</b>: {t('language4Level')}</CVText></li>
+              <li><CVText><b>{t('language5Name')}</b>: {t('language5Level')}</CVText></li>
+            </ul>
           </div>
-
-          <StackExperienceRow Icon={ReactIcon} name="ReactJS" experience={`2 ${t('years')}`} />
-
-          <StackExperienceRow Icon={ReactIcon} name="React-Native" experience={`1 ${t('year')}`} />
-
-          <StackExperienceRow
-            Icon={TypescriptIcon}
-            name="Typescript"
-            experience={`1 ${t('year')}`}
-          />
-
-          <StackExperienceRow Icon={NodejsIcon} name="NodeJS" experience={`2 ${t('years')}`} />
-
-          <StackExperienceRow
-            Icon={NodejsIcon}
-            name="ExpressJS"
-            experience={`2 ${t('years')}`}
-          />
-
-          <StackExperienceRow
-            src={apiIcon}
-            name="API REST"
-            experience={`2 ${t('years')}`}
-          />
-
-          <StackExperienceRow
-            src={databaseIcon}
-            name="SQLite / PostgreSQL"
-            experience={`6 ${t('months')}`}
-          />
-
-          <StackExperienceRow Icon={MongodbIcon} name="MongoDB" experience={`6 ${t('months')}`} />
-
-          <StackExperienceRow Icon={AwsIcon} name="AWS / DevOps" experience={`2 ${t('months')}`} />
-
-          <StackExperienceRow
-            Icon={JavascriptIcon}
-            name="JS / HTML / CSS"
-            experience={`2 ${t('years')}`}
-          />
-
-          <StackExperienceRow src={scrumIcon} name="Scrum" experience={`2 ${t('years')}`} />
         </div>
 
         <div className={classes.experienceSection}>
-          <p className={classes.cvTitle}>Raphael Henrique Braga Leivas</p>
-          {isAcademic ? <></> : <p className={classes.cvSubTitle}>
-            {' '}
-            {t('subtitle')} - {CURRENT_AGE} {t('age')}
-          </p>}
+          <p className={classes.infoSectionTitleRight}>{t('profile')}</p>
 
-          <p className={classes.infoSectionTitle}>{t('professionalExperience')}</p>
+          <CVText>
+            {t('profileText')}
+          </CVText>
+
+          <p className={classes.infoSectionTitleRight}>{t('professionalExperience')}</p>
 
           <ProfessionalExperienceRow
             role={t('techinicianDeveloper')}
             company={t('finatec')}
-            dateStart={'16 ' + t('february') + ' 2022'}
-            dateEnd={'21 ' + t('march') + ' 2023'}
-            activities={
-              isAcademic 
-                ? [t('techinician1'), t('techinician2'), t('techinician4')]
-                : [t('techinician1'), t('techinician2'), t('techinician3'), t('techinician4')]
-            }
+            dateStart={t('dateStartFinatec')}
+            dateEnd={t('dateEndFinatec')}
+            activities={[
+              t('techinician1'),
+              t('techinician2'),
+              t('techinician3'),
+              t('techinician4'),
+            ]}
           />
 
           <ProfessionalExperienceRow
             role={t('developmentIntern')}
             company={t('visuri')}
-            dateStart={'14 ' + t('december') + ' 2020'}
-            dateEnd={'15 ' + t('february') + ' 2022'}
-            activities={
-              isAcademic 
-                ? [t('developmentIntern1'), t('developmentIntern3')]
-                : [t('developmentIntern1'), t('developmentIntern2'), t('developmentIntern3')]
-            }
+            dateStart={t('dateStartVisuri')}
+            dateEnd={t('dateEndVisuri')}
+            activities={[
+              t('developmentIntern1'),
+              t('developmentIntern2'),
+            ]}
           />
 
           <ProfessionalExperienceRow
             role={t('leadingDeveloper')}
+            smallRole
             company={t('cpejr')}
-            dateStart={'01 ' + t('july') + ' 2021'}
-            dateEnd={'31 ' + t('december') + ' 2021'}
-            activities={
-              isAcademic 
-                ? [t('leadingDeveloper2'), t('leadingDeveloper3')]
-                : [t('leadingDeveloper1'), t('leadingDeveloper2'), t('leadingDeveloper3')]
-            }
-          />
-
-          <ProfessionalExperienceRow
-            role={t('technologyConsultant')}
-            company={t('cpejr')}
-            dateStart={'01 ' + t('january') + ' 2021'}
-            dateEnd={'31 ' + t('june') + ' 2021'}
-            activities={[t('technologyConsultant1')]}
-          />
-
-          <ProfessionalExperienceRow
-            role={t('trainee')}
-            company={t('cpejr')}
-            dateStart={'01 ' + t('september') + ' 2020'}
-            dateEnd={'31 ' + t('december') + ' 2020'}
-            activities={[t('trainee1')]}
+            dateStart={t('dateStartCpe')}
+            dateEnd={t('dateEndCpe')}
+            activities={[
+              t('leadingDeveloper1'),
+              t('leadingDeveloper2'),
+              t('leadingDeveloper3'),
+            ]}
             borderless
           />
 
-          <p className={classes.infoSectionTitle}>{t('academicFormation')}</p>
+          <p className={classes.infoSectionTitleRight}>{t('academicFormation')}</p>
+
+          <ProfessionalExperienceRow
+            role={t('labInternship')}
+            company={t('nhlStenden')}
+            dateStart={t('dateStartNhl')}
+            dateEnd={t('dateEndNhl')}
+            activities={[
+              t('nhl1'),
+              t('nhl2'),
+            ]}
+          />
+
+          <ProfessionalExperienceRow
+            role={t('winterkurs')}
+            company={t('uniMannheim')}
+            dateStart={t('dateStartWinterkurs')}
+            dateEnd={t('dateEndWinterkurs')}
+            activities={[
+              t('winterkurs1'),
+              t('winterkurs2'),
+            ]}
+          />
 
           <ProfessionalExperienceRow
             role={t('systemsEngineerUndergraduate')}
             company={t('ufmg')}
-            dateStart={'03 ' + t('march') + ' 2020'}
-            dateEnd={'31 ' + t('december') + ' 2025'}
-            activities={
-              isAcademic 
-                ? [t('ufmg1'), t('ufmg2'), t('ufmg3')]
-                : [t('ufmg1')]
-            }
+            dateStart={t('dateStartUfmg')}
+            dateEnd={t('dateEndUfmg')}
+            activities={[
+              t('ufmg1'),
+              t('ufmg2'),
+              t('ufmg3'),
+              t('ufmg4'),
+              t('ufmg5'),
+              t('ufmg6'),
+              t('ufmg7'),
+            ]}
           />
 
           <ProfessionalExperienceRow
             role={t('cefetTechinician')}
             company={t('cefet')}
-            dateStart={'01 ' + t('february') + ' 2017'}
-            dateEnd={'31 ' + t('november') + ' 2019'}
-            activities={
-              isAcademic 
-                ? [t('cefet1'), t('cefet2')]
-                : [t('cefet1')]
-            }
+            dateStart={t('dateStartCefet')}
+            dateEnd={t('dateEndCefet')}
+            activities={[
+              t('cefet1'),
+              t('cefet2'),
+              t('cefet3'),
+            ]}
             borderless
           />
-
-          <p className={classes.infoSectionTitle}>{t('languages')}</p>
-
-          <div className={classes.languagesList}>
-            <div className={classes.distanceInfoContainer}>
-              <CVText>{t('portuguese')}:</CVText>
-              <CVText>{t('native')}</CVText>
-            </div>
-
-            <div className={classes.distanceInfoContainer}>
-              <CVText>{t('english')}:</CVText>
-              <CVText>{t('advanced')}</CVText>
-            </div>
-
-            <div className={classes.distanceInfoContainer}>
-              <CVText>{t('german')}:</CVText>
-              <CVText>{t('basic')}</CVText>
-            </div>
-          </div>
         </div>
       </div>
     </div>

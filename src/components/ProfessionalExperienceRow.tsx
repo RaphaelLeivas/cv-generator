@@ -9,6 +9,7 @@ interface ProfessionalExperienceRowProps {
   dateEnd: string
   activities?: string[]
   borderless?: boolean
+  smallRole?: boolean
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -28,10 +29,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between'
   },
   infoSectionSubtitle: {
-    textTransform: 'uppercase',
+    textTransform: 'none',
     marginBottom: 2,
-    marginTop: 2,
+    marginTop: 0,
     fontSize: 14,
+    fontWeight: 600,
   },
   companyAndDates: {
     display: 'flex',
@@ -46,6 +48,7 @@ export const ProfessionalExperienceRow = ({
   dateEnd,
   activities = [],
   borderless,
+  smallRole,
 }: ProfessionalExperienceRowProps) => {
   const classes = useStyles()
 
@@ -55,8 +58,8 @@ export const ProfessionalExperienceRow = ({
       style={{ borderBottom: borderless ? 0 : '1px solid #00000033' }}
     >
       <div className={classes.professionalExperienceHeader}>
-        <p className={classes.infoSectionSubtitle}>{role}</p>
-        <CVText italic style={{ margin: 0, marginLeft: 4, fontSize: 10 }}>
+        <p className={classes.infoSectionSubtitle} style={{ fontSize: smallRole ? 12 : undefined }}>{role}</p>
+        <CVText italic style={{ margin: 0, marginLeft: 4, fontSize: 10, textAlign: 'right' }}>
           {dateStart} - {dateEnd}
         </CVText>
       </div>
@@ -65,7 +68,7 @@ export const ProfessionalExperienceRow = ({
         {company}
       </CVText>
 
-      <ul style={{ marginTop: 4, marginBottom: 4 }}>
+      <ul style={{ marginTop: 3, marginBottom: 3, paddingLeft: 20 }}>
         {activities.map((activity, index) => (
           <li key={index} style={{ marginBottom: 4 }}>
             {activity}
