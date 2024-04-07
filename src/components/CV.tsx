@@ -191,24 +191,25 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
           />
 
           <div className={classes.textContainer}>
-            <p className={classes.infoSectionTitle}>Birthday</p>
+            <p className={classes.infoSectionTitle}>{t('birthday')}</p>
             <CVText>17/10/2001</CVText>
 
             <hr style={{ margin: '2px' }} />
 
-            <p className={classes.infoSectionTitle}>Civil status</p>
-            <CVText>Single, no children</CVText>
+            <p className={classes.infoSectionTitle}>{t('civilStatus')}</p>
+            <CVText>{t('currentCivilStatus')}</CVText>
 
             <hr style={{ margin: '2px' }} />
 
-            <p className={classes.infoSectionTitle}>E-Mail</p>
+            <p className={classes.infoSectionTitle}>{t('email')}</p>
             <CVText>raphaelhenrique2013@outlook.com</CVText>
             <CVText style={{ marginTop: '-2px' }} >rapha.lei8@gmail.com</CVText>
 
             <hr style={{ margin: '2px' }} />
 
-            <p className={classes.infoSectionTitle}>Residential Address</p>
-            <CVText>Street Célia de Souza 322 apto 201, Sagrada Família, Belo Horizonte, Minas Gerais, Brazil</CVText>
+            <p className={classes.infoSectionTitle}>{t('residentialAddress')}</p>
+            <CVText>{t('street')} Célia de Souza 322 apto 201, Sagrada Família, Belo Horizonte, Minas Gerais, {t('brazil')}</CVText>
+            <CVText>{t('zipcode')}: 31030-500</CVText>
 
             <hr style={{ margin: '2px' }} />
 
@@ -236,110 +237,131 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 <WhatsappIcon />
               </div>
               <div className={classes.phoneInfo}>
-                <p className={classes.infoSectionTitle}>Phone / {t('whatsapp')}</p>
+                <p className={classes.infoSectionTitle}>{t('phone')} / {t('whatsapp')}</p>
                 <CVText>+55 (31) 9 9563 - 2802</CVText>
               </div>
             </div>
 
             <hr style={{ margin: '2px', marginBottom: '8px' }} />
 
-            <p className={classes.infoSectionTitle}>Knowledge and skills</p>
+            <p className={classes.infoSectionTitle}>{t('knowlegde')}</p>
             <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
-              <li><CVText>Teamwork, Leadership</CVText></li>
-              <li><CVText>Problem Solving</CVText></li>
-              <li><CVText>Proactivity</CVText></li>
-              <li><CVText>Passionate about technology, software and science</CVText></li>
-              <li><CVText>Strive for excellence and high quality standards</CVText></li>
+              <li><CVText>{t('knowlegde1')}</CVText></li>
+              <li><CVText>{t('knowlegde2')}</CVText></li>
+              <li><CVText>{t('knowlegde3')}</CVText></li>
+              <li><CVText>{t('knowlegde4')}</CVText></li>
+              <li><CVText>{t('knowlegde5')}</CVText></li>
             </ul>
 
             <hr style={{ margin: '2px', marginBottom: '8px' }} />
 
-            <p className={classes.infoSectionTitle}>Languages</p>
+            <p className={classes.infoSectionTitle}>{t('languages')}</p>
             <ul style={{ listStyle: 'square', paddingLeft: 16 }}>
-              <li><CVText><b>Portuguese</b>: Native Language</CVText></li>
-              <li><CVText><b>English</b>: C1 - CENEX FALE</CVText></li>
-              <li><CVText><b>German</b>: B1 - onSET Deutsch</CVText></li>
-              <li><CVText><b>Spanish</b>: Elementary language use</CVText></li>
+              <li><CVText><b>{t('language1Name')}</b>: {t('language1Level')}</CVText></li>
+              <li><CVText><b>{t('language2Name')}</b>: {t('language2Level')}</CVText></li>
+              <li><CVText><b>{t('language3Name')}</b>: {t('language3Level')}</CVText></li>
+              <li><CVText><b>{t('language4Name')}</b>: {t('language4Level')}</CVText></li>
+              <li><CVText><b>{t('language5Name')}</b>: {t('language5Level')}</CVText></li>
             </ul>
           </div>
         </div>
 
         <div className={classes.experienceSection}>
-          <p className={classes.infoSectionTitleRight}>Profile</p>
+          <p className={classes.infoSectionTitleRight}>{t('profile')}</p>
 
           <CVText>
-            Engineering student with 2 years of professional experience and completed technician course.
-            Currently I am focusing exclusively on my university studies and academic opportunities.
-            In the future, I seek to participate in 
-            engineering research and innovation either at companies or graduate programs.
+            {t('profileText')}
           </CVText>
 
-          <p className={classes.infoSectionTitleRight}>Professional Experience</p>
+          <p className={classes.infoSectionTitleRight}>{t('professionalExperience')}</p>
 
           <ProfessionalExperienceRow
-            role={"Technician Developer"}
-            company={"Foundation of Scientific and Technological Enterprises - Finatec"}
-            dateStart={"16 February 2022"}
-            dateEnd={"21 March 2023"}
+            role={t('techinicianDeveloper')}
+            company={t('finatec')}
+            dateStart={t('dateStartFinatec')}
+            dateEnd={t('dateEndFinatec')}
             activities={[
-              "Development and maintenance of web systems, mobile applications and REST API for electrical stimulation devices using NodeJS, React Native, Typescript, SQLite and Bluetooth 5.0 communication.",
-              "Experience in an interdisciplinary team for project development. Conflict resolution to meet project requirements and deadlines.",
-              "Flexibility and communication with medical professionals during product development."
+              t('techinician1'),
+              t('techinician2'),
+              t('techinician3'),
+              t('techinician4'),
             ]}
           />
 
           <ProfessionalExperienceRow
-            role={"Development Intern"}
-            company={"Visuri Equipments and Services SA"}
-            dateStart={"14 December 2020"}
-            dateEnd={"15 February 2022"}
+            role={t('developmentIntern')}
+            company={t('visuri')}
+            dateStart={t('dateStartVisuri')}
+            dateEnd={t('dateEndVisuri')}
             activities={[
-              "Development of a web system to manage quick COVID-19 tests using NodeJS, React, ExpressJS, MongoDB.",
-              "Equipment testing, medical equipment maintenance. Reporting. Experience in organization, maintenance management and quality control."
+              t('developmentIntern1'),
+              t('developmentIntern2'),
             ]}
           />
 
           <ProfessionalExperienceRow
-            role={"Technology Consultant / Lead Developer"}
+            role={t('leadingDeveloper')}
             smallRole
-            company={"Junior Electrical Projects and Consulting - CPE Jr"}
-            dateStart={"1 January 2021"}
-            dateEnd={"31 December 2021"}
+            company={t('cpejr')}
+            dateStart={t('dateStartCpe')}
+            dateEnd={t('dateEndCpe')}
             activities={[
-              "Development of web systems with NodeJS, React, DynamoDB, ExpressJS.",
-              "Technical support of a 5 consultant-team with development tasks. Responsible for the final quality of the code and product.",
-              "Firmware development with ESP32 for measuring temperature and acceleration sensors, with communication via Wi-Fi with developed REST API, for remote monitoring of equipments and engines."
+              t('leadingDeveloper1'),
+              t('leadingDeveloper2'),
+              t('leadingDeveloper3'),
             ]}
             borderless
           />
 
-          <p className={classes.infoSectionTitleRight}>Academic Formation</p>
+          <p className={classes.infoSectionTitleRight}>{t('academicFormation')}</p>
 
           <ProfessionalExperienceRow
-            role={"Systems Engineering"}
-            company={"Federal University of Minas Gerais - UFMG"}
-            dateStart={"3 March 2020"}
-            dateEnd={"31 December 2026"}
+            role={t('labInternship')}
+            company={t('nhlStenden')}
+            dateStart={t('dateStartNhl')}
+            dateEnd={t('dateEndNhl')}
             activities={[
-              "Currently in the 7th semester of Systems Engineering course, total of 12.",
-              "Average performance coefficient of 84.92, as shown in the university records.",
-              "One-year voluntary scientific initiation in biomedical engineering, research project entitled “Wearable neuromuscular electrical stimulation system controlled by a mobile application” in the biomedical engineering laboratory.",
-              "Six months of voluntary scientific initiation in aerospace technology, development of an unmanned aircraft for emergency services with the Mechatronics, Control and Robotics group - MACRO.",
-              "Scholarship for Undergraduate Monitor / Tutor in Calculus III (Vector Calculus) by the Faculty of Mathematics of the Institute of Exact Sciences (ICEx) for the year 2023.",
-              "Representation of School of Engineering Athletics at university competitions CIA 2022 and Engenharíadas Mineiro 2022 - Chess team, gold medalist.",
-              "Volunteer for two weeks at the Summer School of Brazilian Studies 2023. Intercultural exchange with students from over 20 different countries."
+              t('nhl1'),
+              t('nhl2'),
             ]}
           />
 
           <ProfessionalExperienceRow
-            role={"Technician Course"}
-            company={"Federal Center of Technological Education of Minas Gerais - CEFET-MG"}
-            dateStart={"1 February 2017"}
-            dateEnd={"29 November 2019"}
+            role={t('winterkurs')}
+            company={t('uniMannheim')}
+            dateStart={t('dateStartWinterkurs')}
+            dateEnd={t('dateEndWinterkurs')}
             activities={[
-              "Technician in Biomedical Equipments.",
-              "Completed high school with an average coefficient of performance of 86.64.",
-              "Awarded 2nd place at the 29th META, with the development and presentation of an electronic project entitled “Use of accelerometers in physiotherapy recovery”.",
+              t('winterkurs1'),
+              t('winterkurs2'),
+            ]}
+          />
+
+          <ProfessionalExperienceRow
+            role={t('systemsEngineerUndergraduate')}
+            company={t('ufmg')}
+            dateStart={t('dateStartUfmg')}
+            dateEnd={t('dateEndUfmg')}
+            activities={[
+              t('ufmg1'),
+              t('ufmg2'),
+              t('ufmg3'),
+              t('ufmg4'),
+              t('ufmg5'),
+              t('ufmg6'),
+              t('ufmg7'),
+            ]}
+          />
+
+          <ProfessionalExperienceRow
+            role={t('cefetTechinician')}
+            company={t('cefet')}
+            dateStart={t('dateStartCefet')}
+            dateEnd={t('dateEndCefet')}
+            activities={[
+              t('cefet1'),
+              t('cefet2'),
+              t('cefet3'),
             ]}
             borderless
           />

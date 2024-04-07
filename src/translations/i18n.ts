@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next'
 
 import en from './en'
 import pt from './pt'
+import de from './de'
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -13,6 +14,9 @@ i18n
       },
       pt: {
         translation: pt,
+      },
+      de: {
+        translation: de,
       },
     },
     lng: 'pt',
