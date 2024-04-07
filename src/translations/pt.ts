@@ -87,7 +87,7 @@ const pt = {
   dateEndWinterkurs: '9 Fevereiro 2024',
   winterkurs1: 'Bolsista pelo DAAD para curso intensivo presencial de 6 semanas sobre a língua e cultura alemã.',
   winterkurs2: 'Obtido nota 2,0 para a turma B1-2.',
-
+  
   cefetTechinician: 'Curso Técnico',
   cefet: 'Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG',
   dateStartCefet: '1 Fevereiro 2017',
@@ -96,33 +96,10 @@ const pt = {
   cefet2: 'Ensino médio concluído com coeficiente de performance médio de 86.64.',
   cefet3: 'Premiado com o 2º lugar na 29º META, com o desenvolvimento e apresentação de um projeto eletrónico intitulado "Utilização de acelerómetros na recuperação fisioterapêutica.',
 
-  // others
-  and: 'and',
-  contact: 'Contact',
-  residence: 'Residence',
-  neighborhood: 'Neighborhood',
-  linkedin: 'LinkedIn',
-  github: 'GitHub',
-  stackExperience: 'Experience per Stack',
-  year: 'Year',
-  years: 'Years',
-  age: 'Years Old',
-  month: 'Month',
-  months: 'Months',
-  subtitle: 'Software Developer',
-
-  january: 'January',
-  february: 'February',
-  march: 'March',
-  april: 'April',
-  may: 'May',
-  june: 'June',
-  july: 'July',
-  agust: 'August',
-  september: 'September',
-  october: 'October',
-  november: 'November',
-  december: 'December',
+  stackExperience: 'Experiência por Stack',
+  year: 'Ano',
+  years: 'Anos',
+  months: 'Meses',
 }
 
 export default pt

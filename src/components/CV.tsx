@@ -9,9 +9,22 @@ import { COLORS } from '../constants/colors'
 // stack icons / SVG
 import { ReactComponent as WhatsappIcon } from '../assets/images/whatsappIcon.svg'
 import { ReactComponent as LinkedinIcon } from '../assets/images/linkedinIcon.svg'
+import { ReactComponent as GitHubIcon } from '../assets/images/githubIcon.svg'
+import { ReactComponent as ReactIcon } from '../assets/images/stack/reactIcon.svg'
+import { ReactComponent as TypescriptIcon } from '../assets/images/stack/typescriptIcon.svg'
+import { ReactComponent as JavascriptIcon } from '../assets/images/stack/javascriptIcon.svg'
+import { ReactComponent as NodejsIcon } from '../assets/images/stack/nodejsIcon.svg'
+import { ReactComponent as MongodbIcon } from '../assets/images/stack/mongodbIcon.svg'
+import { ReactComponent as AwsIcon } from '../assets/images/stack/awsIcon.svg'
 
+import { StackExperienceRow } from './StackExperienceRow'
 import { ProfessionalExperienceRow } from './ProfessionalExperienceRow'
 import { CVText } from './CVText'
+
+// stack icons / SVG
+import databaseIcon from '../assets/images/stack/databaseIcon.png'
+import scrumIcon from '../assets/images/stack/scrumIcon.png'
+import apiIcon from '../assets/images/stack/apiIcon.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
 
     display: 'flex',
     flexDirection: 'row',
+
+    padding: '16px',
+    paddingTop: '4px',
   },
   infoSection: {
     flex: 1,
@@ -27,8 +43,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: COLORS.LIGHTGRAY,
+    // backgroundColor: COLORS.LIGHTGRAY,
     padding: '10px 20px 10px 20px',
+    // borderRight: '1px solid gray',
   },
   stackExperience: {
     display: 'flex',
@@ -176,6 +193,7 @@ interface CVProps {
 
 export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
   const classes = useStyles()
+  const { isAcademic } = props
   const { t } = useTranslation()
 
   return (
@@ -242,6 +260,28 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               </div>
             </div>
 
+            {!isAcademic && (
+              <>
+                <hr style={{ margin: '2px' }} />
+                <div className={classes.phoneContainer}>
+                  <div className={classes.linkedinIcon}>
+                    <GitHubIcon />
+                  </div>
+                  <div className={classes.phoneInfo}>
+                    <p className={classes.infoSectionTitle}>GitHub</p>
+                    <a
+                      href="https://github.com/RaphaelLeivas"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ marginTop: 6, marginBottom: 6 }}
+                    >
+                      /RaphaelLeivas/
+                    </a>
+                  </div>
+                </div>
+              </>
+            )}
+
             <hr style={{ margin: '2px', marginBottom: '8px' }} />
 
             <p className={classes.infoSectionTitle}>{t('knowlegde')}</p>
@@ -263,6 +303,54 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               <li><CVText><b>{t('language4Name')}</b>: {t('language4Level')}</CVText></li>
               <li><CVText><b>{t('language5Name')}</b>: {t('language5Level')}</CVText></li>
             </ul>
+
+            {!isAcademic && (
+              <>
+                <hr style={{ margin: '2px', marginBottom: '8px' }} />
+                <p className={classes.infoSectionTitle} style={{ fontSize: 15 }}>{t('stackExperience')}</p>
+                <StackExperienceRow Icon={ReactIcon} name="ReactJS" experience={`2 ${t('years')}`} />
+
+                <StackExperienceRow Icon={ReactIcon} name="React-Native" experience={`1 ${t('year')}`} />
+
+                <StackExperienceRow
+                  Icon={TypescriptIcon}
+                  name="Typescript"
+                  experience={`1 ${t('year')}`}
+                />
+
+                <StackExperienceRow Icon={NodejsIcon} name="NodeJS" experience={`2 ${t('years')}`} />
+
+                <StackExperienceRow
+                  Icon={NodejsIcon}
+                  name="ExpressJS"
+                  experience={`2 ${t('years')}`}
+                />
+
+                <StackExperienceRow
+                  src={apiIcon}
+                  name="API REST"
+                  experience={`2 ${t('years')}`}
+                />
+
+                <StackExperienceRow
+                  src={databaseIcon}
+                  name="SQLite / PostgreSQL"
+                  experience={`6 ${t('months')}`}
+                />
+
+                <StackExperienceRow Icon={MongodbIcon} name="MongoDB" experience={`6 ${t('months')}`} />
+
+                <StackExperienceRow Icon={AwsIcon} name="AWS / DevOps" experience={`2 ${t('months')}`} />
+
+                <StackExperienceRow
+                  Icon={JavascriptIcon}
+                  name="JS / HTML / CSS"
+                  experience={`2 ${t('years')}`}
+                />
+
+                <StackExperienceRow src={scrumIcon} name="Scrum" experience={`2 ${t('years')}`} />
+              </>
+            )}
           </div>
         </div>
 

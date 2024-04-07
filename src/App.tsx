@@ -86,6 +86,7 @@ function App() {
           </Button>
         </div>
       </div>
+      <p>OBS: use "Salvar como PDF", e não "Microsoft Print to PDF" na hora de salvar o PDF para evitar que o PDF desconfigure!</p>
 
       <CV ref={componentRef} isAcademic={isAcademic} />
     </div>
