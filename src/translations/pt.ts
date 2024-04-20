@@ -40,6 +40,8 @@ const pt = {
     "Experiência em equipe interdisciplinar para desenvolvimento de projetos. Resolução de conflitos para atender aos requisitos e prazos do projeto.",
   techinician3: "Flexibilidade e comunicação com profissionais da área da saúde durante o desenvolvimento de produtos.",
   techinician4: 'Modelagem de bancos de dados relacionais para armazenamento de dados de aplicativos móveis e da web.',
+  techinician5: 'Desenvolvimento e manutenção de sistemas Web e API REST para interface com a aplicação mobile, usando React, PostgreSQL, ExpressJS.',
+  techinician6: 'Deploy em servidores de teste e produção EC2 (AWS), com Docker e Nginx.',
 
   developmentIntern: 'Estagiário em Desenvolvimento',
   visuri: 'Visuri Equipamentos e Serviços SA',
@@ -49,13 +51,14 @@ const pt = {
     'Desenvolvimento de sistema Web para gestão de testes rápidos de COVID-19, usando NodeJS, React, ExpressJS, MongoDB.',
   developmentIntern2:
     'Testes e manutenção de equipamentos médicos. Elaboração de relatórios. Experiência em organização, gestão de manutenção e controle de qualidade.',
+  developmentIntern3: 'Desenvolvimento de aplicação desktop para interface com dispositivo para testes PCR-LAMP, usando Electron, React, Material UI.',
 
   leadingDeveloper: 'Desenvolvedor Líder / Consultor de Tecnologia',
   cpejr: 'Consultoria e Projetos Elétricos Júnior - CPE Jr',
   dateStartCpe: '1 Janeiro 2021"',
   dateEndCpe: '31 Dezembro 2021',
   leadingDeveloper1:
-    'Desemvolvimento de sistemas web com NodeJS, React, DynamoDB, ExpressJS.',
+    'Desenvolvimento de sistemas web com NodeJS, React, DynamoDB, ExpressJS.',
   leadingDeveloper2: 'Suporte técnico de uma equipe de 5 consultores com tarefas de desenvolvimento. Responsável pela qualidade final do código e produto.',
   leadingDeveloper3:
     'Desenvolvimento de firmware com ESP32 para medição de sensores de temperatura e aceleração, com comunicação via Wi-Fi com API REST desenvolvida, para monitoramento remoto de equipamentos e motores.',

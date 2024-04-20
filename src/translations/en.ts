@@ -40,6 +40,8 @@ const en = {
     "Experience in an interdisciplinary team for project development. Conflict resolution to meet project requirements and deadlines.",
   techinician3: "Flexibility and communication with medical professionals during product development.",
   techinician4: 'Database modeling of relational databases for storing mobile and web application data.',
+  techinician5: 'Development and maintenance of Web systems and REST API to interface with mobile applications, using React, PostgreSQL, ExpressJS.',
+  techinician6: 'Deploy on EC2 test and production servers (AWS), with Docker and Nginx.',
 
   developmentIntern: 'Development Intern',
   visuri: 'Visuri Equipments and Services SA',
@@ -49,6 +51,7 @@ const en = {
     'Development of a web system to manage quick COVID-19 tests using NodeJS, React, ExpressJS, MongoDB.',
   developmentIntern2:
     'Equipment testing, medical equipment maintenance. Reporting. Experience in organization, maintenance management and quality control.',
+  developmentIntern3: 'Development of a desktop application to interface with a device for PCR-LAMP testing, using Electron, React, Material UI.',
 
   leadingDeveloper: 'Lead developer / Technology Consultant',
   cpejr: 'Junior Electrical Projects and Consulting - CPE Jr',
