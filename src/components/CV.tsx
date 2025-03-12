@@ -1,7 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import profileImage from '../assets/images/profile.jpeg'
+// import profileImage from '../assets/images/profile.jpeg'
+import profileImage from '../assets/images/profile2.jpg'
 import randomImage from '../assets/images/random.jpg'
 import { useStyles } from '../styles/useStyles'
 
@@ -97,7 +98,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               </div>
               <div className={classes.phoneInfo}>
                 <p className={classes.infoSectionTitle}>{t('phone')} / {t('whatsapp')}</p>
-                <CVText>+55 (31) 9 9563 - 2802</CVText>
+                <CVText>+55 (31) 9 7187 - 7376</CVText>
               </div>
             </div>
 
@@ -197,15 +198,28 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
         </div>
 
         <div className={classes.experienceSection}>
-          {isAcademic ? <>
+          {/* {isAcademic ? <>
             <p className={classes.infoSectionTitleRight}>{t('profile')}</p>
 
             <CVText>
               {t('profileText')}
             </CVText>
-          </> : null}
+          </> : null} */}
 
           <p className={classes.infoSectionTitleRight}>{t('professionalExperience')}</p>
+
+          <ProfessionalExperienceRow
+            role={t('labInternship')}
+            company={t('nhlStenden')}
+            dateStart={t('dateStartNhl')}
+            dateEnd={t('dateEndNhl')}
+            activities={[
+              t('nhl1'),
+              // t('nhl2'),
+              t('nhl3'),
+              t('nhl4'),
+            ]}
+          />
 
           <ProfessionalExperienceRow
             role={t('techinicianDeveloper')}
@@ -214,7 +228,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateEnd={t('dateEndFinatec')}
             activities={isAcademic ? [
               t('techinician1'),
-              t('techinician2'),
+              // t('techinician2'),
               t('techinician3'),
               t('techinician4'),
             ] : [
@@ -225,7 +239,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             ]}
           />
 
-          <ProfessionalExperienceRow
+          {/* <ProfessionalExperienceRow
             role={t('developmentIntern')}
             company={t('visuri')}
             dateStart={t('dateStartVisuri')}
@@ -238,7 +252,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               t('developmentIntern3'),
               t('developmentIntern2'),
             ]}
-          />
+          /> */}
 
           <ProfessionalExperienceRow
             role={t('leadingDeveloper')}
@@ -257,13 +271,22 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
           <p className={classes.infoSectionTitleRight}>{t('academicFormation')}</p>
 
           <ProfessionalExperienceRow
-            role={t('labInternship')}
-            company={t('nhlStenden')}
-            dateStart={t('dateStartNhl')}
-            dateEnd={t('dateEndNhl')}
-            activities={[
-              t('nhl1'),
-              t('nhl2'),
+            role={t('systemsEngineerUndergraduate')}
+            company={t('ufmg')}
+            dateStart={t('dateStartUfmg')}
+            dateEnd={t('dateEndUfmg')}
+            activities={isAcademic ? [
+              t('ufmg1'),
+              // t('ufmg2'),
+              t('ufmg3'),
+              t('ufmg4'),
+              t('ufmg5'),
+              // t('ufmg6'),
+              t('ufmg7'),
+            ] : [
+              t('ufmg1'),
+              t('ufmg3'),
+              t('ufmg4'),
             ]}
           />
 
@@ -274,27 +297,7 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateEnd={t('dateEndWinterkurs')}
             activities={[
               t('winterkurs1'),
-              t('winterkurs2'),
-            ]}
-          />
-
-          <ProfessionalExperienceRow
-            role={t('systemsEngineerUndergraduate')}
-            company={t('ufmg')}
-            dateStart={t('dateStartUfmg')}
-            dateEnd={t('dateEndUfmg')}
-            activities={isAcademic ? [
-              t('ufmg1'),
-              t('ufmg2'),
-              t('ufmg3'),
-              t('ufmg4'),
-              t('ufmg5'),
-              t('ufmg6'),
-              t('ufmg7'),
-            ] : [
-              t('ufmg1'),
-              t('ufmg3'),
-              t('ufmg4'),
+              // t('winterkurs2'),
             ]}
           />
 
@@ -305,8 +308,8 @@ export const CV = React.forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             dateEnd={t('dateEndCefet')}
             activities={isAcademic ? [
               t('cefet1'),
-              t('cefet2'),
-              t('cefet3'),
+              // t('cefet2'),
+              // t('cefet3'),
             ] : [
               t('cefet1'),
             ]}

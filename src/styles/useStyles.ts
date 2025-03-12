@@ -19,7 +19,7 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     // backgroundColor: COLORS.LIGHTGRAY,
-    padding: '10px 20px 10px 20px',
+    padding: '10px 16px 10px 16px',
     // borderRight: '1px solid gray',
   },
   stackExperience: {
@@ -41,7 +41,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   profileImage: {
     borderRadius: '50%',
-    width: '200px',
+    width: '164px',
   },
   stackItemRow: {
     width: '100%',
